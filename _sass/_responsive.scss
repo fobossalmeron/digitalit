@@ -1,0 +1,602 @@
+@include media-query($x1100-down) {
+  #discountbanner .hideBanner{
+    min-height: 120px;
+  }
+  .convention_card h2 {
+    font-size: 1.3em;
+  }
+  .quoteNumber{
+    h2{
+      font-size: 1.5em;
+    }
+  }
+  section{
+    padding: 3%;
+  }
+  footer{
+    padding:3%;
+    ul li{
+      &:nth-of-type(1){
+        width:15.5%;
+      }
+      &:nth-of-type(2){
+        width:27%;
+        padding-right: 2%;
+      }
+      &:nth-of-type(3){
+        width:19.5%;
+      }
+      &:nth-of-type(4){
+        width:38%;
+        padding-right: 0;
+      }
+    }
+  }
+  .instaQuoteForm{
+    margin-right:2%;
+    select{
+      width:100%;
+    }
+    .blueSuggest{
+      .linkText{
+        line-height: 1;
+      }
+      p{
+        display:block;
+      }
+    }
+    p{
+      display: none;
+    }
+    .theX{display:none;}
+  }
+  #boothGrid{
+    margin-right: 2%;
+    width: 76%;
+  }
+  .discounts-menu{
+    margin-left: 10%;
+  }
+  nav ul{
+    margin-right: 0;
+  }
+  .quoteCheck{
+    label{
+      padding: 5% 6% 3% 6%;
+      &:before{
+        right: 8px;
+      }
+    }
+    width: 100%;
+  }
+  .singleBooth .singleInfo {
+    padding-left: 3%;
+  }
+}
+
+@include media-query($x1000-down) {
+
+  .react-tabs__tab{
+    height:70px;
+    .backSlide{
+      left:-45px;
+    }
+    .frontSlide{
+      right: -45px;
+      span{
+        top:6px;
+      }
+    }
+  }
+  .clickFor {
+    font-size: 12px;
+    bottom: 35px;
+  }
+  #content h1, h2{
+    font-size: 1.3em;
+  }
+  .quoteNumber{
+    h2{
+      font-size: 1.4em;
+    }
+  }
+  .frompdf span {
+    font-size: 5em;
+  }
+  #contact a{
+    clear:both;
+    &:nth-of-type(1) {
+      margin-left: 0px;
+    }
+  }
+  footer{
+    padding:3%;
+    ul li{
+      &:nth-of-type(1){
+        width:23%;
+      }
+      &:nth-of-type(2){
+        width:43%;
+        padding-right: 4%;
+      }
+      &:nth-of-type(3){
+        width:33%;
+      }
+      &:nth-of-type(4){
+        width:100%;
+        padding-right: 0;
+      }
+    }
+  }
+  .contactBox {
+    padding: 1% 2%;
+    margin-bottom: 2%;
+  }
+  .singleBooth{
+    .singleInfo {
+      width: 50%;
+      padding-right: 2%;
+    }
+    .singleImage {
+      width: 50%;
+      .onlyTwo{
+        padding: 0 20px;
+      }
+    }
+  }
+  .boothGridItem{
+        min-height: 215px;
+        width: 48%;
+        &:nth-child(3n+3){
+          margin-right:1%;
+        }
+        &:nth-child(even){
+          margin-right:0;
+        }
+  }
+  #boothGrid{
+        width: 78%;
+        margin-right:0;
+        height:665px;
+  }
+  nav ul  {
+        transform: translateX(-100%);
+        position: fixed;
+        padding: 5%;
+        width: 100%;
+        z-index: -2;
+        background-color: $magenta;
+        height: 100%;
+        top: 100px;
+        margin: 0;
+        left: 0;
+        bottom: 0px;
+        transform: translateX(-100%);
+    li{
+      float: right;
+      height: auto;
+      clear: both;
+      padding: 2% 5%;
+      font-size:1.5em;
+      text-align: left;
+      a{
+        font-weight: 700;
+      }
+    }
+  }
+  .menuButton{
+    display:block;
+  }
+  .navScroll {
+    ul{
+      margin-top: 0;
+      top:60px;
+    }
+  }
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 85%;
+  }
+}
+
+@include media-query($x900-down) {
+  .convention_card{
+    padding: 0 2% 2% 2%;
+    h2 {
+      font-size: 1em;
+    }
+  }
+  #dataCollector{
+    form {
+      width: 71%;
+      float: right;
+    }
+    input{
+      clear: both;
+      width: 100%;
+    }
+    button{
+      width: 100%;
+      margin-top: 4%;
+      padding: 3%;
+    }
+    .FormError{
+      position: relative;
+      white-space: normal;
+      height:auto;
+    }
+  }
+  .quoteNumber{
+    h2{
+      width:100%;
+    }
+    ul{
+      clear: both;
+      width:100%;
+      padding-top:1%;
+    }
+  }
+  .instaQuoteButton{
+    width: 55%;
+    padding: 4%;
+    margin-top: 0;
+  }
+  .singleBooth{
+    .singleImage{
+     padding:0;
+     width: 70%;
+     margin: 0 15%;
+    }
+    .singleInfo{
+      width: 100%;
+      padding:2% 2% 0 0;
+    }
+  }
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 95%;
+  }
+}
+
+@include media-query($x800-down) {
+  .stepyellowbox {
+    margin: 4% 0 2% 0;
+  }
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 70%;
+  }
+  .convention_card{
+    width:100%;
+    &:nth-of-type(2){
+      margin-top: 0;
+    }
+    h2{
+      font-size:1.5em;
+    }
+  }
+  #content{
+    column-count: 1;
+  }
+  #dataCollector{
+    form {
+      width: 70%;
+      float: left;
+    }
+  }
+  .instaColumn{
+    width: 100%;
+    .instaThumbnail{
+      width: 50%;
+      height: 180px;
+    }
+  }
+  .instaInfo{
+    width:100%;
+    padding:0;
+  }
+  .instaQuoteWhole ul{
+    padding: 0 0 0 5%;
+    width: 50%;
+    clear:none;
+  }
+  .quoteNumber ul{
+    padding: 0% 0 3% 0;
+    width:100%;
+  }
+  #contact a{
+    clear:none;
+    &:nth-of-type(1) {
+      margin-left: 25px;
+    }
+  }
+  #slider .sliderCard{
+    width:80%;
+  }
+  .social-list a{
+    &:nth-of-type(odd) {
+      clear: none;
+    }
+  }
+  footer{
+    padding:3%;
+    ul li{
+      &:nth-of-type(1){
+        width:100%;
+      }
+      &:nth-of-type(2){
+        width:100%;
+        padding-right: 0;
+      }
+      &:nth-of-type(3){
+        width:100%;
+      }
+    }
+  }
+  .hideOnMobile{
+    display: none;
+  }
+  #services{
+    .full-service {
+      padding: inherit;
+    }
+    ul li {
+      width:100%;
+    }
+  }
+
+  #clients ul li {
+    width: 40%;
+    margin-right: 8%;
+    margin-left: 4%;
+
+    &:nth-child(3n+3){
+      margin-right: 8%;
+    }
+    &:nth-child(even){
+      margin: 0;
+    }
+  }
+
+  .half-card{
+    width: 100%;
+    &:nth-of-type(2n+2) {
+      padding: 0
+    }
+  }
+  #products h2{
+    font-size: 1.3em;
+  }
+  #boothGrid{
+    width: 76%;
+    margin-right:0px;
+  }
+  .instaQuoteForm{
+    margin-right:1%;
+    width:23%;
+  }
+  .iconsBar{
+    ul li{
+      width:33%;
+      font-size: .8em;
+      margin-bottom: 5%;
+      svg{
+        padding:3%;
+      }
+    }
+  }
+}
+
+@include media-query($x700-down) {
+  .singleVideo {
+    max-width: 98%;
+    margin-right: 2%;
+  }
+
+  .slick-slider{
+    width:98%;
+    margin-right:2%;
+  }
+  iframe.visualizer{
+      min-height:350px;
+  }
+  .resetButton{
+    margin: 6% 3%;
+  }
+  .discounts-menu {
+    margin-left: 8%;
+    font-size: .9em;
+  }
+  .instaQuoteButton{
+    width: 100%;
+    padding: 4%;
+  }
+  .singleBooth{
+    .singleImage{
+     width: 100%;
+     margin:0;
+    }
+  }
+  .visualizer{
+    padding-right: 2%;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.4em;
+  }
+  #boothGrid{
+    width:70%
+  }
+  .instaQuoteForm{
+    margin-right:1%;
+    width:29%;
+  }
+}
+
+@include media-query($x600-down) {
+  .frompdf .stepbox:nth-of-type(1) {
+    width: 94%;
+  }
+  #playForMobile{
+    display:block;
+  }
+  iframe.visualizer{
+      min-height:250px;
+  }
+  .singleBooth{
+    .singleImage {
+      .onlyTwo{
+        padding: 0px;
+      }
+    }
+  }
+  #downloadButton{
+    animation-name: bounce;
+  }
+  .whatDifference{
+    font-size:0.7em;
+  }
+  .loading h2 {
+    font-size: 2em;
+  }
+  #slider .sliderCard{
+    width:90%;
+  }
+  .boothGridItem{
+        min-height: 190px;
+        width: 100%;
+  }
+  #boothGrid{
+    width:60%
+  }
+  .instaQuoteForm{
+    width:39%;
+  }
+  .discounts-menu{
+    display: none;
+  }
+}
+
+@include media-query($x500-down) {
+  .whatDifference.spanMagenta{
+    b{
+      min-width: 0;
+      width: 100%;
+    }
+  }
+  #discountbanner .hideBanner{
+    min-height: 60px;
+  }
+  .convention_card{
+    h2{
+      font-size:1.2em;
+    }
+  }
+  .instaInfo .scheduleButton{
+    width: 100%;
+  }
+  #dataCollector{
+    form {
+      width: 100%;
+      float: left;
+      margin:0;
+    }
+  }
+  .instaQuoteWhole ul {
+    font-size: .8em;
+  }
+  .quoteNumber ul {
+    font-size: .4em;
+    padding: 0% 0 3% 0;
+  }
+  #clients{
+    ul{
+      width:100%;
+    }
+    .column{
+      width: 100%;
+      h3{
+        margin-bottom: 5%;
+      }
+    }
+  }
+  #contact a{
+    clear:both;
+    font-size:1em;
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+  #home h1{
+    font-size:2.4em;
+  }
+  .iconsBar{
+    ul li{
+      width:50%;
+      font-size: .8em;
+      margin-bottom: 5%;
+      svg{
+        padding:5%;
+      }
+    }
+  }
+  .blueSuggest label{
+    font-size: .8em;
+  }
+}
+
+@include media-query($x400-down) {
+  .loading{
+    font-size: .9em;
+  }
+  .convention_card{
+    h1{
+      font-size:2em;
+    }
+    h2{
+      font-size:1em;
+    }
+  }
+  #about h1 {
+    font-size: 1.5em;
+  }
+  .frompdf span {
+    font-size: 4em;
+    margin-bottom: 2%;
+  }
+  .frompdf .stepbox:nth-of-type(1),.frompdf .stepbox:nth-of-type(2),.frompdf .stepbox:nth-of-type(3) {
+    width: 100%;
+  }
+  #slider .sliderCard {
+    width: 100%;
+  }
+  .react-tabs__tab {
+    width: 36%;
+    margin-left: 3%;
+
+    &:nth-of-type(2){
+      margin-right:2%;
+      width: 53%;
+      padding-left: 5%;
+    }
+  }
+  .contactBox a {
+    font-size: 14px;
+  }
+  #home h1 {
+    font-size: 2em;
+  }
+  #boothGrid{
+    width:61%;
+    height: 600px;
+  }
+  .instaQuoteForm{
+    width:38%;
+    font-size: .9em;
+  }
+  .instaQuoteWhole ul {
+    font-size: .7em;
+  }
+  .quoteNumber ul {
+    font-size: .4em;
+  }
+  #products h2 {
+    font-size: 1.2em;
+  }
+}

@@ -1,0 +1,365 @@
+body {
+  font-size: 1.4rem;
+  margin: 0 auto;
+  width: 100%;
+  color: white;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  max-width: 1400px;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-direction: row;
+  font-size: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 4% 8px 4%;
+  nav{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+  }
+  .hideText{
+    font-size: 0rem !important;
+  }
+  .designSuccessLogo,.designSuccessLogoMobile, .websiteLogo{
+    width:120px;
+    *{
+      fill: white;
+      &.yellow, &.yellow *{
+        fill: $brand-main-color;
+      }
+    }
+  }
+  .designSuccessLogoMobile, .hamburgerIcon{
+    display:none;
+  }
+  .animated{
+    opacity: 0;
+  }
+  #websiteLogo{
+    transition: .3s ease all;
+    &.show{
+      opacity: 1;
+    }
+  }
+  a, .a {
+    color: white;
+    cursor: pointer;
+    flex-grow: 1;
+    justify-self: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    opacity: 0.7;
+    font-size: 1.3rem;
+    transition: .3s ease all;
+    &:nth-child(1), &:nth-child(2) {
+      opacity:1;
+    } 
+    &:nth-child(1), &:nth-child(2) {
+      flex-grow: 3;
+    }
+    &:hover, &.active{
+      opacity:1;
+      font-weight: 600;
+    }
+  }
+}
+
+footer {
+  font-size: 1.4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  color: grey;
+  text-align: center;
+  margin-bottom: 20px;
+  a{
+    text-decoration: underline;
+  }
+  p{
+    padding: 0px 8%;
+  }
+  .socialList {
+    width: 150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    svg{
+      width:25px;
+      & * {
+        fill: grey;
+      }
+    }
+  }
+}
+
+section {
+    display: grid;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+svg {
+    width: 100%;
+}
+
+#trustedby {
+    .firstColumned {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 13%;
+        p {
+            font-family: 'Eurostile LT', sans-serif;
+            text-align: justify;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 1.4;
+            span {
+                font-size: 5rem;
+                line-height: 0;
+                height: 10px;
+                position: relative;
+                top: 25px;
+            }
+        }
+        label {
+            font-family: 'Eurostile LT', sans-serif;
+            font-weight: 100;
+            font-size: 1.5rem;
+            width: 100%;
+            top: 9px;
+            position: relative;
+        }
+    }
+    .trustedGrid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 5%;
+        div {
+            position: relative;
+            &:hover {
+                .detailBox {
+                    opacity: 1;
+                }
+            }
+            .hasDetailBox {
+                &:after {
+                    content: ' ';
+                    width: 40px;
+                    height: 3px;
+                    margin-top: 30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    display: flex;
+                    background-color: $brand-main-color;
+                }
+            }
+        }
+        .detailBox {
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-weight: 100;
+            font-size: 1.6rem;
+            background-color: black;
+            border: 1px solid;
+            z-index: 1;
+            opacity: 0;
+            top: -80px;
+            transition: .3s ease all;
+        }
+        .trustedVideo {
+            grid-column-start: 3;
+            /* autoprefixer: off */
+            grid-column-end: span 2;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            z-index: -2;
+            text-align: center;
+            margin: 7% 0;
+            height: 270px;
+            width: 420px;
+            justify-content: center;
+            display: flex;
+            #trianglePlay {
+                position: absolute;
+                display: none;
+                margin: 0 auto;
+                width: 0;
+                height: 0;
+                border-top: 17px solid transparent;
+                border-left: 30px solid white;
+                border-bottom: 17px solid transparent;
+                z-index: 1;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 40%;
+                cursor: pointer;
+            }
+            div {
+                width: auto !important;
+                height: auto !important;
+            }
+            p {
+                font-size: 1.7rem;
+                font-weight: 100;
+                align-items: flex-end;
+                display: flex;
+            }
+        }
+        svg {
+            max-height: 50px;
+            & * {
+                fill: gray;
+            }
+        }
+    }
+}
+
+#contact {
+    display: grid;
+    padding: 5% 10px 5% 0;
+    grid-template-columns: 1fr .8fr .8fr 3fr;
+    grid-template-areas: ". logo logo ." ". h2 h2 ." ". form form ." ". form form locations ";
+    .locationContact {
+        grid-area: locations;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: space-between;
+        padding: 0 5% 0 10%;
+        margin-top: 4%;
+        font-size: 1.3rem;
+        ul {
+            grid-area: 1 /span 2;
+            display: flex;
+            list-style-type: none;
+            color: gray;
+            justify-content: space-between;
+            li {
+                flex-grow: 1;
+            }
+        }
+        p {
+            grid-area: 2 /span 1;
+            justify-self: flex-start;
+            margin-left: 30px;
+            &:nth-child(2) {
+                grid-row-end: span 1;
+                margin-left: 0;
+            }
+            flex-grow: 4;
+            a {
+                color: white;
+                float: right;
+            }
+        }
+    }
+    .engageLogo {
+        grid-area: logo;
+        svg * {
+            fill: $brand-main-color;
+        }
+    }
+    h2 {
+        grid-area: h2;
+        color: white;
+        font-size: 7rem;
+        margin-top: 10%;
+        line-height: .9;
+    }
+    .form {
+        grid-area: form;
+        margin-top: 10%;
+        form div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10%;
+            grid-template-areas: "name company" "email phone" "challenge challenge";
+            font-family: 'Eurostile LT', sans-serif;
+        }
+        input,
+        textarea {
+            background-color: transparent;
+            font-family: inherit;
+            border: 1px solid #3d3d3d;
+            border-width: 0 0 1px 0;
+            margin-top: 15%;
+            color: grey;
+            resize: none;
+            line-height: .5;
+            font-size: 1.6rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        input {
+            &:nth-child(1) {
+                grid-area: name;
+            }
+            &:nth-child(2) {
+                grid-area: company;
+            }
+            &:nth-child(3) {
+                grid-area: email;
+            }
+            &:nth-child(4) {
+                grid-area: phone;
+            }
+        }
+        textarea {
+            grid-area: challenge;
+            margin-top: 10%;
+            height: 25px;
+            line-height: 1.6;
+        }
+        button {
+            font-family: inherit;
+            background-color: transparent;
+            border: 1px solid #3d3d3d;
+            color: grey;
+            font-size: 1.5rem;
+            width: 90px;
+            padding: 5px;
+            margin-top: 10%;
+        }
+    }
+    .locationMap {
+        grid-column-start: 3;
+        /* autoprefixer: off */
+        grid-column-end: col4-end;
+        grid-row-start: 1;
+        grid-row-end: last-line;
+        z-index: -1;
+        margin-left: 5%;
+        svg {
+            .st1 {
+                animation: repulse infinite ease-out 1s;
+                transform-origin: 50% 50%;
+                animation-fill-mode: both;
+                animation-direction: alternate;
+            }
+            .st0 {
+                fill: #4f4f4f;
+            }
+        }
+    }
+}
