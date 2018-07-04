@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import ContactForm from "./ContactForm";
-import DigitalSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../assets/img/layout/digitalSuccess.svg";
-import LocationMap from "svg-react-loader?name=LocationMap!../../assets/img/layout/locationMap.svg";
-import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../assets/img/social/instagram.svg";
-import FacebookIcon from "svg-react-loader?name=FacebookIcon!../../assets/img/social/facebook.svg";
-import VimeoIcon from "svg-react-loader?name=VimeoIcon!../../assets/img/social/vimeo.svg";
-import YouTubeIcon from "svg-react-loader?name=YouTubeIcon!../../assets/img/social/youtube.svg";
-import LinkedInIcon from "svg-react-loader?name=LinkedInIcon!../../assets/img/social/linkedin.svg";
-import TwitterIcon from "svg-react-loader?name=TwitterIcon!../../assets/img/social/twitter.svg";
+import ContactForm from "./../ContactForm";
+import DigitalSuccess from "svg-react-loader?name=DigitalSuccessIcon!../../../assets/img/layout/digitalSuccess.svg";
+import LocationMap from "svg-react-loader?name=LocationMap!../../../assets/img/layout/locationMap.svg";
+import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../../assets/img/social/instagram.svg";
+import FacebookIcon from "svg-react-loader?name=FacebookIcon!../../../assets/img/social/facebook.svg";
+import VimeoIcon from "svg-react-loader?name=VimeoIcon!../../../assets/img/social/vimeo.svg";
+import YouTubeIcon from "svg-react-loader?name=YouTubeIcon!../../../assets/img/social/youtube.svg";
+import LinkedInIcon from "svg-react-loader?name=LinkedInIcon!../../../assets/img/social/linkedin.svg";
+import TwitterIcon from "svg-react-loader?name=TwitterIcon!../../../assets/img/social/twitter.svg";
 
 
 class ContactSection extends Component {

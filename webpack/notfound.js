@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {render} from 'react-dom';
-import Nav from './components/presentational/Nav';
-import ContactSection from './components/ContactSection';
+import Nav from './components/Nav';
+import ContactSection from './components/presentational/ContactSection';
 
 class NotFound extends Component {
   constructor(props) {

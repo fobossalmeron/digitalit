@@ -1,49 +1,85 @@
-import React, { Component } from 'react';
-import NikeIcon from 'svg-react-loader?name=NikeIcon!../../../assets/img/clients/clientNike.svg';
-import CocaColaIcon from 'svg-react-loader?name=CocaColaIcon!../../../assets/img/clients/clientCocaCola.svg';
-import ChanelIcon from 'svg-react-loader?name=ChanelIcon!../../../assets/img/clients/clientChanel.svg';
-import MoneyGramIcon from 'svg-react-loader?name=MoneyGramIcon!../../../assets/img/clients/clientMoneyGram.svg';
-import CapitalOneIcon from 'svg-react-loader?name=CapitalOneIcon!../../../assets/img/clients/clientCapitalOne.svg';
-import BaseFIcon from 'svg-react-loader?name=BaseFIcon!../../../assets/img/clients/clientBaseF.svg';
-import NovartisIcon from 'svg-react-loader?name=NovartisIcon!../../../assets/img/clients/clientNovartis.svg';
-import DiageoIcon from 'svg-react-loader?name=DiageoIcon!../../../assets/img/clients/clientDiageo.svg';
-import KraftIcon from 'svg-react-loader?name=KraftIcon!../../../assets/img/clients/clientKraft.svg';
-import PepsicoIcon from 'svg-react-loader?name=PepsicoIcon!../../../assets/img/clients/clientPepsico.svg';
-import BMWIcon from 'svg-react-loader?name=BMWIcon!../../../assets/img/clients/clientBMW.svg';
-import BossIcon from 'svg-react-loader?name=BossIcon!../../../assets/img/clients/clientBoss.svg';
+import React, { Component } from "react";
+import NikeIcon from "svg-react-loader?name=NikeIcon!../../../assets/img/clients/clientNike.svg";
+import CocaColaIcon from "svg-react-loader?name=CocaColaIcon!../../../assets/img/clients/clientCocaCola.svg";
+import ChanelIcon from "svg-react-loader?name=ChanelIcon!../../../assets/img/clients/clientChanel.svg";
+import MoneyGramIcon from "svg-react-loader?name=MoneyGramIcon!../../../assets/img/clients/clientMoneyGram.svg";
+import CapitalOneIcon from "svg-react-loader?name=CapitalOneIcon!../../../assets/img/clients/clientCapitalOne.svg";
+import BaseFIcon from "svg-react-loader?name=BaseFIcon!../../../assets/img/clients/clientBaseF.svg";
+import NovartisIcon from "svg-react-loader?name=NovartisIcon!../../../assets/img/clients/clientNovartis.svg";
+import DiageoIcon from "svg-react-loader?name=DiageoIcon!../../../assets/img/clients/clientDiageo.svg";
+import KraftIcon from "svg-react-loader?name=KraftIcon!../../../assets/img/clients/clientKraft.svg";
+import PepsicoIcon from "svg-react-loader?name=PepsicoIcon!../../../assets/img/clients/clientPepsico.svg";
+import BMWIcon from "svg-react-loader?name=BMWIcon!../../../assets/img/clients/clientBMW.svg";
+import BossIcon from "svg-react-loader?name=BossIcon!../../../assets/img/clients/clientBoss.svg";
+import Graphic1 from "svg-react-loader?name=Graphic1!../../../assets/img/layout/graphic1.svg";
+import Graphic2 from "svg-react-loader?name=Graphic2!../../../assets/img/layout/graphic2.svg";
+import Graphic3 from "svg-react-loader?name=Graphic3!../../../assets/img/layout/graphic3.svg";
+import Graphic4 from "svg-react-loader?name=Graphic4!../../../assets/img/layout/graphic4.svg";
+import Graphic5 from "svg-react-loader?name=Graphic5!../../../assets/img/layout/graphic5.svg";
 
-
-class StaticSection extends Component {
-
-  render (){
-
+class AboutSection extends Component {
+  render() {
     return (
-        <section id="about">
-          <h2><b>about us</b></h2>
-          <div className="half-card frompdf">
-            <span>1,</span> <span>2,</span> <span>3 </span> <span> go</span>
-            <p>All you have to do is show up and <b>let the show begin!</b></p>
-            <div id="stepbox1" className="stepbox"><b>1:</b><p>communicate your need<br/>free 3D renders and animation<br/>select and done</p></div>
-            <div id="stepbox2" className="stepbox"><b>2:</b><p>we create and<br/>make it happen</p></div>
-            <div id="stepbox3" className="stepbox"><b>3:</b><p>we deliver<br/>…and take care of it all</p></div>
-            <div className="stepblackbox"><b className="arbitraryPink">best price, best quality</b></div>
+      <section id="what&amp;how">
+        <div className="screen1 screen">
+          <p>
+            Combining digital agency services and innovation business consulting
+            we transform business process and end-user engagement successfully.
+            From prototyping to enterprise solutions:
+          </p>
+          <Graphic1 />
+        </div>
+        <div className="screen2 screen">
+          <ul>
+            <li>
+              <Graphic2 />
+              <h3>reimagine</h3>
+              <p>
+                Utilizing design:success’ proprietary innovation process we
+                identify innovation digital solutions. <br /> Rapid digital
+                mock-ups, UI/UX’s and flow’s tested live with real consumers.
+              </p>
+            </li>
+            <li>
+              <Graphic3 />
+              <h3>(re)invent</h3>
+              <p>
+                Based on deep insights and data we (re)invent the IT & digital
+                experience from UI/UX front end to integration back-end – with
+                in-depth architecture and flows.
+              </p>
+            </li>
+            <li>
+              <Graphic4 />
+              <h3>realize</h3>
+              <p>
+                We design and build THE real experience and solution, and by
+                clients choice either as functional prototyping or as final
+                end-to-end enterprise product.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div className="screen3 screen">
+          <div className="box">
+            <h2>the results are simple</h2>
+            <Graphic5 />
           </div>
-          <div className="half-card">
-            <div className="stepyellowbox">
-              <p><b>more for less</b><br/>better service, better products, <br/>better results, less stress, less worry</p>
-            </div>
-            <h1><b>more than spaces</b></h1>
-            <ul>
-              <li>Established and located in Las Vegas, <b>the convention capital</b>, we understand the world of trade shows.</li>
-              <li>Believes in creativity, simplicity and <b>good prices</b> - and always to go over and beyond with a smile.</li>
-              <li>Is a concept by <b>design:success</b> a world leading design and innovation company. </li>
-              <li>Trusted by the world’s most iconic brands and <b>Fortune500</b> companies.</li>
-            </ul>
-            <p>We proudly work with companies, event planners and agencies across the USA and international.</p>
-          </div>
-        </section>
+          <h3>rapid</h3>
+          <p>faster than any other innovation and IT process</p>
+          <h3>repositioning</h3>
+          <p>
+            the brand, company and experience towards customers and investors
+          </p>
+          <h3>(r)evolutionize</h3>
+          <p>
+            changing the brand, category and experience forever – increasing
+            ROI, faster
+          </p>
+        </div>
+      </section>
     );
   }
-};
+}
 
-export default StaticSection;
+export default AboutSection;

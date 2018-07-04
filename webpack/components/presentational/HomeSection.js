@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
-import DigitalSuccess from "svg-react-loader?name=DesignSuccess!../../assets/img/layout/digitalSuccess.svg";
+import DigitalSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/digitalSuccess.svg";
 
 class HomeSection extends Component {
   constructor(props) {
@@ -21,28 +21,16 @@ class HomeSection extends Component {
   }
 
   render() {
-    var showOver = (
-      <div className="overVideo">
-        <DigitalSuccess className="engageLogo" />
-        <h1>reimagine, (re)invent, realize</h1>
-        <p>
-          We are award-winning digital pioneers that takes validated
-          innovations, strategies and products and make them come digitally
-          alive – fast!
-        </p>
-      </div>
-    );
-
     return (
       <section id="home">
         <div className="overVideo">
-          <DigitalSuccess className="engageLogo" />
+          <DigitalSuccess className="mainLogo" />
           <h1>reimagine, (re)invent, realize</h1>
-          <p>
+          <h2>
             We are award-winning digital pioneers that takes validated
             innovations, strategies and products and make them come digitally
             alive – fast!
-          </p>
+          </h2>
         </div>
         <div id="homevideo">
           <div className="video_overlay" />

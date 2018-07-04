@@ -1,4 +1,3 @@
-<div>
 <section id="trustedby">
   <div className="firstColumned">
     <div>
@@ -44,65 +43,6 @@
             <ReactSVG path={withPrefix("/svg/clients/clientCampbells.svg")} />
           </div>
 </section>
-<section id="engage">
-          <ReactSVG
-            wrapperClassName="engageLogo"
-            path={withPrefix("/svg/layout/sportsDirect.svg")}
-          />
-          <h2>challenges welcome</h2>
-          <div className="locationContact">
-            <ul className="chooseList">
-              <li>las vegas</li>
-              <li>mexico city</li>
-              <li>copenhaguen</li>
-              <li>singapore</li>
-            </ul>
-            <p>universal number: +1-702 802 0200</p>
-            <p>
-              <a href="mailto:success@designsuccess.com">
-                success@designsuccess.com
-              </a>
-            </p>
-          </div>
-          <ContactForm/>
-          <ReactSVG
-            wrapperClassName="locationMap"
-            path={withPrefix("/svg/layout/locationMap.svg")}
-          />
-</section>
-<footer>
-          <div className="socialList">
-            <ReactSVG
-              wrapperClassName="socialIcon"
-              path={withPrefix("/svg/social/facebook.svg")}
-            />
-            <ReactSVG
-              wrapperClassName="socialIcon"
-              path={withPrefix("/svg/social/vimeo.svg")}
-            />
-            <ReactSVG
-              wrapperClassName="socialIcon"
-              path={withPrefix("/svg/social/youtube.svg")}
-            />
-            <ReactSVG
-              wrapperClassName="socialIcon"
-              path={withPrefix("/svg/social/instagram.svg")}
-            />
-            <ReactSVG
-              wrapperClassName="socialIcon"
-              path={withPrefix("/svg/social/linkedin.svg")}
-            />
-            <ReactSVG
-              wrapperClassName="socialIcon"
-              path={withPrefix("/svg/social/twitter.svg")}
-            />
-          </div>
-          <p>
-            © design success international ds worldwide consulting llc. all
-            rights reserved. <a>privacy of use</a> | <a>terms & conditions</a>
-          </p>
-</footer>
-</div>
     );
   }
 }
