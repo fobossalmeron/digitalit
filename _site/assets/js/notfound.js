@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 273);
+/******/ 	return __webpack_require__(__webpack_require__.s = 276);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -12188,7 +12188,7 @@ function compose() {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ActionTypes; });
 /* harmony export (immutable) */ __webpack_exports__["a"] = createStore;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_symbol_observable__ = __webpack_require__(266);
 
 
 
@@ -12543,8 +12543,460 @@ InstagramIcon.default = InstagramIcon;
 
 
 /***/ }),
-/* 112 */,
-/* 113 */,
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _hamburger = __webpack_require__(260);
+
+var _hamburger2 = _interopRequireDefault(_hamburger);
+
+var _designSuccess = __webpack_require__(255);
+
+var _designSuccess2 = _interopRequireDefault(_designSuccess);
+
+var _designSuccessMobile = __webpack_require__(256);
+
+var _designSuccessMobile2 = _interopRequireDefault(_designSuccessMobile);
+
+var _digitalSuccess = __webpack_require__(110);
+
+var _digitalSuccess2 = _interopRequireDefault(_digitalSuccess);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Nav = function (_Component) {
+  _inherits(Nav, _Component);
+
+  function Nav(props) {
+    _classCallCheck(this, Nav);
+
+    var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
+
+    _this.state = {
+      relative: false,
+      menuOn: false
+    };
+    _this.navScrollMagic = _this.navScrollMagic.bind(_this);
+    _this.doToggleMenu = _this.doToggleMenu.bind(_this);
+    _this.doHideNav = _this.doHideNav.bind(_this);
+    return _this;
+  }
+
+  _createClass(Nav, [{
+    key: "doToggleMenu",
+    value: function doToggleMenu() {
+      this.setState({ menuOn: !this.state.menuOn });
+      document.body.classList.toggle("restrictBody");
+      document.addEventListener("touchstart", this.touchstart);
+      document.addEventListener("touchmove", this.touchmove);
+      function touchstart(e) {
+        e.preventDefault();
+      }
+      function touchmove(e) {
+        e.preventDefault();
+      }
+    }
+  }, {
+    key: "doHideNav",
+    value: function doHideNav() {
+      this.setState({ menuOn: false });
+      document.body.classList.remove("restrictBody");
+      document.removeEventListener("touchstart", this.touchstart);
+      document.removeEventListener("touchmove", this.touchmove);
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      if (typeof this.props.relativePath !== "undefined") {
+        this.setState({ relative: true }, function () {
+          return _this2.navScrollMagic();
+        });
+      } else {
+        this.navScrollMagic();
+      }
+    }
+  }, {
+    key: "doScrollToHome",
+    value: function doScrollToHome(event) {
+      if (typeof this.props.scrollToHome !== "undefined") {
+        event.preventDefault();
+        this.props.scrollToHome();
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, "#");
+        }
+      }
+    }
+  }, {
+    key: "doScrollToAbout",
+    value: function doScrollToAbout(event) {
+      if (typeof this.props.scrollToAbout !== "undefined") {
+        event.preventDefault();
+        this.props.scrollToAbout();
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, "#who&what");
+        }
+      }
+    }
+  }, {
+    key: "doScrollToWork",
+    value: function doScrollToWork() {
+      if (typeof this.props.scrollToWork !== "undefined") {
+        event.preventDefault();
+        this.props.scrollToWork();
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, "#work");
+        }
+      }
+    }
+  }, {
+    key: "doScrollToServices",
+    value: function doScrollToServices() {
+      if (typeof this.props.scrollToServices !== "undefined") {
+        event.preventDefault();
+        this.props.scrollToServices();
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, "#serviceareas");
+        }
+      }
+    }
+  }, {
+    key: "doScrollToContact",
+    value: function doScrollToContact() {
+      if (typeof this.props.scrollToContact !== "undefined") {
+        event.preventDefault();
+        this.props.scrollToContact();
+        if (window.history && window.history.pushState) {
+          history.pushState("", document.title, "#contact");
+        }
+      }
+    }
+  }, {
+    key: "navScrollMagic",
+    value: function navScrollMagic() {
+      var controllerX = new ScrollMagic.Controller({
+        globalSceneOptions: { triggerHook: 0 }
+      });
+      var logoScene = new ScrollMagic.Scene({
+        triggerElement: "body",
+        offset: 15
+      }).setClassToggle("header", "headerScroll").addTo(controllerX);
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var baseUrl = this.state.relative ? this.props.relativePath : "";
+      var isActive = this.state.menuOn ? "menuActive" : "";
+      var navIsActive = this.state.menuOn ? "navActive" : "";
+      var navToggled = this.state.menuOn ? "toggled" : "";
+
+      return _react2.default.createElement(
+        "header",
+        null,
+        _react2.default.createElement(
+          "a",
+          { className: "hideText", href: "http://designsuccess.com" },
+          _react2.default.createElement(_designSuccess2.default, { className: "designSuccessLogo" }),
+          _react2.default.createElement(_designSuccessMobile2.default, { className: "designSuccessLogoMobile" }),
+          "design:success"
+        ),
+        _react2.default.createElement(
+          "a",
+          { onClick: function onClick() {
+              _this3.doHideNav();
+              _this3.doScrollToHome(event);
+            }, href: baseUrl + "#home", className: "hideText a" },
+          _react2.default.createElement(_digitalSuccess2.default, { className: "websiteLogo", id: "websiteLogo" }),
+          "digital:success"
+        ),
+        _react2.default.createElement(
+          "div",
+          {
+            id: "hamburger",
+            className: navToggled,
+            onClick: function onClick() {
+              return _this3.toggleNav();
+            }
+          },
+          _react2.default.createElement(_hamburger2.default, {
+            onClick: this.doToggleMenu,
+            className: "menuButton " + isActive
+          })
+        ),
+        _react2.default.createElement(
+          "nav",
+          {
+            id: navIsActive,
+            className: navToggled,
+            onClick: function onClick() {
+              return _this3.closeNav();
+            }
+          },
+          _react2.default.createElement(
+            "ul",
+            null,
+            _react2.default.createElement(
+              "li",
+              {
+                onClick: function onClick() {
+                  _this3.doHideNav();
+                  _this3.doScrollToAbout(event);
+                }
+              },
+              _react2.default.createElement(
+                "a",
+                { href: baseUrl + "#what&amp;how" },
+                "what & how"
+              )
+            ),
+            _react2.default.createElement(
+              "li",
+              {
+                onClick: function onClick() {
+                  _this3.doHideNav();
+                  _this3.doScrollToWork(event);
+                }
+              },
+              _react2.default.createElement(
+                "a",
+                { href: baseUrl + "#work" },
+                "work"
+              )
+            ),
+            _react2.default.createElement(
+              "li",
+              {
+                onClick: function onClick() {
+                  _this3.doHideNav();
+                  _this3.doScrollToServices();
+                }
+              },
+              _react2.default.createElement(
+                "a",
+                { href: baseUrl + "#serviceareas" },
+                "service areas"
+              )
+            ),
+            _react2.default.createElement(
+              "li",
+              {
+                onClick: function onClick() {
+                  _this3.doHideNav();
+                  _this3.doScrollToContact();
+                }
+              },
+              _react2.default.createElement(
+                "a",
+                { href: baseUrl + "#contact" },
+                "contact"
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Nav;
+}(_react.Component);
+
+exports.default = Nav;
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _ContactForm = __webpack_require__(114);
+
+var _ContactForm2 = _interopRequireDefault(_ContactForm);
+
+var _digitalSuccess = __webpack_require__(257);
+
+var _digitalSuccess2 = _interopRequireDefault(_digitalSuccess);
+
+var _locationMap = __webpack_require__(262);
+
+var _locationMap2 = _interopRequireDefault(_locationMap);
+
+var _instagram = __webpack_require__(111);
+
+var _instagram2 = _interopRequireDefault(_instagram);
+
+var _facebook = __webpack_require__(258);
+
+var _facebook2 = _interopRequireDefault(_facebook);
+
+var _vimeo = __webpack_require__(264);
+
+var _vimeo2 = _interopRequireDefault(_vimeo);
+
+var _youtube = __webpack_require__(265);
+
+var _youtube2 = _interopRequireDefault(_youtube);
+
+var _linkedin = __webpack_require__(261);
+
+var _linkedin2 = _interopRequireDefault(_linkedin);
+
+var _twitter = __webpack_require__(263);
+
+var _twitter2 = _interopRequireDefault(_twitter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var ContactSection = function (_Component) {
+  _inherits(ContactSection, _Component);
+
+  function ContactSection(props) {
+    _classCallCheck(this, ContactSection);
+
+    var _this = _possibleConstructorReturn(this, (ContactSection.__proto__ || Object.getPrototypeOf(ContactSection)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(ContactSection, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+          "section",
+          { id: "contact" },
+          _react2.default.createElement(_digitalSuccess2.default, { className: "engageLogo" }),
+          _react2.default.createElement(
+            "h2",
+            null,
+            "challenges welcome"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "locationContact" },
+            _react2.default.createElement(
+              "ul",
+              { className: "chooseList" },
+              _react2.default.createElement(
+                "li",
+                null,
+                "las vegas"
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                "mexico city"
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                "copenhaguen"
+              ),
+              _react2.default.createElement(
+                "li",
+                null,
+                "singapore"
+              )
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "universal number: +1-702 802 0200"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              _react2.default.createElement(
+                "a",
+                { href: "mailto:success@designsuccess.com" },
+                "success@designsuccess.com"
+              )
+            )
+          ),
+          _react2.default.createElement(_ContactForm2.default, null),
+          _react2.default.createElement(_locationMap2.default, { className: "locationMap" })
+        ),
+        _react2.default.createElement(
+          "footer",
+          null,
+          _react2.default.createElement(
+            "div",
+            { className: "socialList" },
+            _react2.default.createElement(_facebook2.default, { className: "socialIcon" }),
+            _react2.default.createElement(_vimeo2.default, { className: "socialIcon" }),
+            _react2.default.createElement(_youtube2.default, { className: "socialIcon" }),
+            _react2.default.createElement(_instagram2.default, { className: "socialIcon" }),
+            _react2.default.createElement(_linkedin2.default, { className: "socialIcon" }),
+            _react2.default.createElement(_twitter2.default, { className: "socialIcon" })
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "\xA9 design success international ds worldwide consulting llc. all rights reserved. ",
+            _react2.default.createElement(
+              "a",
+              null,
+              "privacy of use"
+            ),
+            " | ",
+            _react2.default.createElement(
+              "a",
+              null,
+              "terms & conditions"
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return ContactSection;
+}(_react.Component);
+
+exports.default = ContactSection;
+
+/***/ }),
 /* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -28622,7 +29074,8 @@ FacebookIcon.default = FacebookIcon;
 
 
 /***/ }),
-/* 259 */
+/* 259 */,
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -28641,7 +29094,7 @@ HamburgerIcon.default = HamburgerIcon;
 
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -28660,7 +29113,7 @@ LinkedInIcon.default = LinkedInIcon;
 
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -28679,7 +29132,7 @@ LocationMap.default = LocationMap;
 
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -28698,7 +29151,7 @@ TwitterIcon.default = TwitterIcon;
 
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -28717,7 +29170,7 @@ VimeoIcon.default = VimeoIcon;
 
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1);
@@ -28736,11 +29189,11 @@ YouTubeIcon.default = YouTubeIcon;
 
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(266);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(267);
 /* global window */
 
 
@@ -28761,10 +29214,10 @@ if (typeof self !== 'undefined') {
 var result = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(58), __webpack_require__(267)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(58), __webpack_require__(268)(module)))
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28789,7 +29242,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -28819,12 +29272,14 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 268 */,
 /* 269 */,
 /* 270 */,
 /* 271 */,
 /* 272 */,
-/* 273 */
+/* 273 */,
+/* 274 */,
+/* 275 */,
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28842,11 +29297,11 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactDom = __webpack_require__(59);
 
-var _Nav = __webpack_require__(311);
+var _Nav = __webpack_require__(112);
 
 var _Nav2 = _interopRequireDefault(_Nav);
 
-var _ContactSection = __webpack_require__(313);
+var _ContactSection = __webpack_require__(113);
 
 var _ContactSection2 = _interopRequireDefault(_ContactSection);
 
@@ -28911,498 +29366,6 @@ exports.default = NotFound;
 
 
 (0, _reactDom.render)(_react2.default.createElement(NotFound, null), document.getElementById('layout'));
-
-/***/ }),
-/* 274 */,
-/* 275 */,
-/* 276 */,
-/* 277 */,
-/* 278 */,
-/* 279 */,
-/* 280 */,
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _hamburger = __webpack_require__(259);
-
-var _hamburger2 = _interopRequireDefault(_hamburger);
-
-var _designSuccess = __webpack_require__(255);
-
-var _designSuccess2 = _interopRequireDefault(_designSuccess);
-
-var _designSuccessMobile = __webpack_require__(256);
-
-var _designSuccessMobile2 = _interopRequireDefault(_designSuccessMobile);
-
-var _digitalSuccess = __webpack_require__(110);
-
-var _digitalSuccess2 = _interopRequireDefault(_digitalSuccess);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Nav = function (_Component) {
-  _inherits(Nav, _Component);
-
-  function Nav(props) {
-    _classCallCheck(this, Nav);
-
-    var _this = _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).call(this, props));
-
-    _this.state = {
-      relative: false,
-      menuOn: false
-    };
-    _this.navScrollMagic = _this.navScrollMagic.bind(_this);
-    _this.doToggleMenu = _this.doToggleMenu.bind(_this);
-    _this.doHideNav = _this.doHideNav.bind(_this);
-    return _this;
-  }
-
-  _createClass(Nav, [{
-    key: "doToggleMenu",
-    value: function doToggleMenu() {
-      this.setState({ menuOn: !this.state.menuOn });
-      document.body.classList.toggle("restrictBody");
-      document.addEventListener("touchstart", this.touchstart);
-      document.addEventListener("touchmove", this.touchmove);
-      function touchstart(e) {
-        e.preventDefault();
-      }
-      function touchmove(e) {
-        e.preventDefault();
-      }
-    }
-  }, {
-    key: "doHideNav",
-    value: function doHideNav() {
-      this.setState({ menuOn: false });
-      document.body.classList.remove("restrictBody");
-      document.removeEventListener("touchstart", this.touchstart);
-      document.removeEventListener("touchmove", this.touchmove);
-    }
-  }, {
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      if (typeof this.props.relativePath !== "undefined") {
-        this.setState({ relative: true }, function () {
-          return _this2.navScrollMagic();
-        });
-      } else {
-        this.navScrollMagic();
-      }
-    }
-  }, {
-    key: "doScrollToHome",
-    value: function doScrollToHome(event) {
-      if (typeof this.props.scrollToHome !== "undefined") {
-        event.preventDefault();
-        this.props.scrollToHome();
-        if (window.history && window.history.pushState) {
-          history.pushState("", document.title, "#");
-        }
-      }
-    }
-  }, {
-    key: "doScrollToAbout",
-    value: function doScrollToAbout(event) {
-      if (typeof this.props.scrollToAbout !== "undefined") {
-        event.preventDefault();
-        this.props.scrollToAbout();
-        if (window.history && window.history.pushState) {
-          history.pushState("", document.title, "#who&what");
-        }
-      }
-    }
-  }, {
-    key: "doScrollToWork",
-    value: function doScrollToWork() {
-      if (typeof this.props.scrollToWork !== "undefined") {
-        event.preventDefault();
-        this.props.scrollToWork();
-        if (window.history && window.history.pushState) {
-          history.pushState("", document.title, "#work");
-        }
-      }
-    }
-  }, {
-    key: "doScrollToServices",
-    value: function doScrollToServices() {
-      if (typeof this.props.scrollToServices !== "undefined") {
-        event.preventDefault();
-        this.props.scrollToServices();
-        if (window.history && window.history.pushState) {
-          history.pushState("", document.title, "#serviceareas");
-        }
-      }
-    }
-  }, {
-    key: "doScrollToContact",
-    value: function doScrollToContact() {
-      if (typeof this.props.scrollToContact !== "undefined") {
-        event.preventDefault();
-        this.props.scrollToContact();
-        if (window.history && window.history.pushState) {
-          history.pushState("", document.title, "#contact");
-        }
-      }
-    }
-  }, {
-    key: "navScrollMagic",
-    value: function navScrollMagic() {
-      var controllerX = new ScrollMagic.Controller({
-        globalSceneOptions: { triggerHook: 0 }
-      });
-      var logoScene = new ScrollMagic.Scene({
-        triggerElement: "body",
-        offset: 15
-      }).setClassToggle("header", "headerScroll").addTo(controllerX);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this3 = this;
-
-      var baseUrl = this.state.relative ? this.props.relativePath : "";
-      var isActive = this.state.menuOn ? "menuActive" : "";
-      var navIsActive = this.state.menuOn ? "navActive" : "";
-      var navToggled = this.state.menuOn ? "toggled" : "";
-
-      return _react2.default.createElement(
-        "header",
-        null,
-        _react2.default.createElement(
-          "a",
-          { className: "hideText", href: "http://designsuccess.com" },
-          _react2.default.createElement(_designSuccess2.default, { className: "designSuccessLogo" }),
-          _react2.default.createElement(_designSuccessMobile2.default, { className: "designSuccessLogoMobile" }),
-          "design:success"
-        ),
-        _react2.default.createElement(
-          "a",
-          { onClick: function onClick() {
-              _this3.doHideNav();
-              _this3.doScrollToHome(event);
-            }, href: baseUrl + "#home", className: "hideText a" },
-          _react2.default.createElement(_digitalSuccess2.default, { className: "websiteLogo", id: "websiteLogo" }),
-          "digital:success"
-        ),
-        _react2.default.createElement(
-          "div",
-          {
-            id: "hamburger",
-            className: navToggled,
-            onClick: function onClick() {
-              return _this3.toggleNav();
-            }
-          },
-          _react2.default.createElement(_hamburger2.default, {
-            onClick: this.doToggleMenu,
-            className: "menuButton " + isActive
-          })
-        ),
-        _react2.default.createElement(
-          "nav",
-          {
-            id: navIsActive,
-            className: navToggled,
-            onClick: function onClick() {
-              return _this3.closeNav();
-            }
-          },
-          _react2.default.createElement(
-            "ul",
-            null,
-            _react2.default.createElement(
-              "li",
-              {
-                onClick: function onClick() {
-                  _this3.doHideNav();
-                  _this3.doScrollToAbout(event);
-                }
-              },
-              _react2.default.createElement(
-                "a",
-                { href: baseUrl + "#what&amp;how" },
-                "what & how"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              {
-                onClick: function onClick() {
-                  _this3.doHideNav();
-                  _this3.doScrollToWork(event);
-                }
-              },
-              _react2.default.createElement(
-                "a",
-                { href: baseUrl + "#work" },
-                "work"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              {
-                onClick: function onClick() {
-                  _this3.doHideNav();
-                  _this3.doScrollToServices();
-                }
-              },
-              _react2.default.createElement(
-                "a",
-                { href: baseUrl + "#serviceareas" },
-                "service areas"
-              )
-            ),
-            _react2.default.createElement(
-              "li",
-              {
-                onClick: function onClick() {
-                  _this3.doHideNav();
-                  _this3.doScrollToContact();
-                }
-              },
-              _react2.default.createElement(
-                "a",
-                { href: baseUrl + "#contact" },
-                "contact"
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Nav;
-}(_react.Component);
-
-exports.default = Nav;
-
-/***/ }),
-/* 312 */,
-/* 313 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(1);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _ContactForm = __webpack_require__(114);
-
-var _ContactForm2 = _interopRequireDefault(_ContactForm);
-
-var _digitalSuccess = __webpack_require__(257);
-
-var _digitalSuccess2 = _interopRequireDefault(_digitalSuccess);
-
-var _locationMap = __webpack_require__(261);
-
-var _locationMap2 = _interopRequireDefault(_locationMap);
-
-var _instagram = __webpack_require__(111);
-
-var _instagram2 = _interopRequireDefault(_instagram);
-
-var _facebook = __webpack_require__(258);
-
-var _facebook2 = _interopRequireDefault(_facebook);
-
-var _vimeo = __webpack_require__(263);
-
-var _vimeo2 = _interopRequireDefault(_vimeo);
-
-var _youtube = __webpack_require__(264);
-
-var _youtube2 = _interopRequireDefault(_youtube);
-
-var _linkedin = __webpack_require__(260);
-
-var _linkedin2 = _interopRequireDefault(_linkedin);
-
-var _twitter = __webpack_require__(262);
-
-var _twitter2 = _interopRequireDefault(_twitter);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var ContactSection = function (_Component) {
-  _inherits(ContactSection, _Component);
-
-  function ContactSection(props) {
-    _classCallCheck(this, ContactSection);
-
-    var _this = _possibleConstructorReturn(this, (ContactSection.__proto__ || Object.getPrototypeOf(ContactSection)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(ContactSection, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        _react2.default.createElement(
-          "section",
-          { id: "contact" },
-          _react2.default.createElement(_digitalSuccess2.default, { className: "engageLogo" }),
-          _react2.default.createElement(
-            "h2",
-            null,
-            "challenges welcome"
-          ),
-          _react2.default.createElement(
-            "div",
-            { className: "locationContact" },
-            _react2.default.createElement(
-              "ul",
-              { className: "chooseList" },
-              _react2.default.createElement(
-                "li",
-                null,
-                "las vegas"
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                "mexico city"
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                "copenhaguen"
-              ),
-              _react2.default.createElement(
-                "li",
-                null,
-                "singapore"
-              )
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "universal number: +1-702 802 0200"
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              _react2.default.createElement(
-                "a",
-                { href: "mailto:success@designsuccess.com" },
-                "success@designsuccess.com"
-              )
-            )
-          ),
-          _react2.default.createElement(_ContactForm2.default, null),
-          _react2.default.createElement(_locationMap2.default, { className: "locationMap" })
-        ),
-        _react2.default.createElement(
-          "footer",
-          null,
-          _react2.default.createElement(
-            "div",
-            { className: "socialList" },
-            _react2.default.createElement(_facebook2.default, { className: "socialIcon" }),
-            _react2.default.createElement(_vimeo2.default, { className: "socialIcon" }),
-            _react2.default.createElement(_youtube2.default, { className: "socialIcon" }),
-            _react2.default.createElement(_instagram2.default, { className: "socialIcon" }),
-            _react2.default.createElement(_linkedin2.default, { className: "socialIcon" }),
-            _react2.default.createElement(_twitter2.default, { className: "socialIcon" })
-          ),
-          _react2.default.createElement(
-            "p",
-            null,
-            "\xA9 design success international ds worldwide consulting llc. all rights reserved. ",
-            _react2.default.createElement(
-              "a",
-              null,
-              "privacy of use"
-            ),
-            " | ",
-            _react2.default.createElement(
-              "a",
-              null,
-              "terms & conditions"
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return ContactSection;
-}(_react.Component);
-
-exports.default = ContactSection;
 
 /***/ })
 /******/ ]);

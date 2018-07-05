@@ -34445,9 +34445,9 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _graphic = __webpack_require__(306);
+var _Areas = __webpack_require__(315);
 
-var _graphic2 = _interopRequireDefault(_graphic);
+var _Areas2 = _interopRequireDefault(_Areas);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34894,6 +34894,116 @@ var ServicesSection = function (_Component) {
               )
             )
           )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "screen7 screen" },
+          _react2.default.createElement(
+            "h3",
+            null,
+            "Functional prototyping"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Fast and agile prototyping, DS facilitates a multidisciplinary team of experts to prototype a concept and test it with real (existing and potential) customer. Validating UI, experience, product and business model."
+          ),
+          _react2.default.createElement(
+            "h3",
+            null,
+            "AI (Artificial Intelligence) Technologies"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Our AI experts navigate our clients from the ins-and-outs of the landscape, the possibilities, all the way to fully developed and deployed AI solutions."
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "subbed" },
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Pre-emptive action / response"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Conversational AI empowered by AIEEDA. (Artificial Intelligence Engagement Engine with Data Analytics) Exclusively developed by design:success AIEEDA can engage responsive across all communication channels, ranging from traditional call centers and email support to social media, messaging apps, and even smart connected devices. Utilizing voice and text and across multiple languages"
+            ),
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Virtual Agents"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Development of Virtual agents; conversational computer programs that interact directly with a customer without human intervention. Manage spikes in demand without the need to hire additional agents. DS CSA Agents understands 12 languages and can be connected with virtually any text-based platform"
+            ),
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Voice user Interface"
+            ),
+            _react2.default.createElement(
+              "p",
+              null,
+              "Enables corporates to delivery consumer driven solutions empowered by DS CSA through voice enabled devices such as Amazon Echo, Google Home, Google Assistant or IVR"
+            )
+          ),
+          _react2.default.createElement(
+            "h3",
+            null,
+            "Hyperlocation"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Hyperlocation DS partners with clients to innovate with location-targeted technology to create hyperlocal contextual experiences, to drive better business intelligence, engage the end user and deliver proximity-based targeting and content delivery:"
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "inMenu" },
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Indoor Navigation"
+            ),
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Beacon Technology"
+            ),
+            _react2.default.createElement(
+              "h4",
+              null,
+              "Contextual IoT"
+            )
+          ),
+          _react2.default.createElement(
+            "h3",
+            null,
+            "Integration"
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "Integration We ensure that complex and intelligent solutions that require the application to communicate with an online resource in some way, including CRM, ERP such SAP or back-end systems.",
+            _react2.default.createElement("br", null),
+            _react2.default.createElement("br", null),
+            "DS understands the complexities of integrating with back-end systems and have the in-house skills and experience to employ full-scale integration; designing and building robust APIs and mobile ready back-ends."
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "screen8 screen" },
+          _react2.default.createElement(
+            "h2",
+            null,
+            "service areas"
+          ),
+          _react2.default.createElement(_Areas2.default, null)
         )
       );
     }
@@ -35516,6 +35626,334 @@ var WorkSection = function (_Component) {
 }(_react.Component);
 
 exports.default = WorkSection;
+
+/***/ }),
+/* 315 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _areasModal = __webpack_require__(316);
+
+var _areasModal2 = _interopRequireDefault(_areasModal);
+
+var _graphic = __webpack_require__(317);
+
+var _graphic2 = _interopRequireDefault(_graphic);
+
+var _graphic3 = __webpack_require__(318);
+
+var _graphic4 = _interopRequireDefault(_graphic3);
+
+var _graphic5 = __webpack_require__(319);
+
+var _graphic6 = _interopRequireDefault(_graphic5);
+
+var _graphic7 = __webpack_require__(320);
+
+var _graphic8 = _interopRequireDefault(_graphic7);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var areasData = {
+  "areases": [{
+    "id": 1,
+    "title": "Customer Success Management",
+    "desc": "A seamless delivery process is led by our team of project managers who are adept at bringing together the work of our strategy, design and development teams. Our experienced team are flexible to adopt client project procedures, adapting methodologies accordingly; implementing a Waterfall, Agile or Hybrid approach.",
+    "svg": _react2.default.createElement(_graphic2.default, { className: "areasIcon" })
+  }, {
+    "id": 2,
+    "title": "Quality Assurance (QA)",
+    "desc": "To facilitate the delivery of a seamless experience and completely functional solution, our quality assurance team tests all apps to ensure they adhere strictly to specifications and requirements. The QA team’s extensive testing process involves using a combination of manual and automated methods, throughout the development process, to ensure the development of best in class mobile apps.",
+    "svg": _react2.default.createElement(_graphic6.default, { className: "areasIcon" })
+  }, {
+    "id": 3,
+    "title": "Continuous improvement",
+    "desc": "DS integrates analytics into every solution that is built, as standard. Maintaining digital solution is a continual process that requires updates based on user behavior and a thorough understanding of the analytics available, delivered by our support and maintenance offering.",
+    "svg": _react2.default.createElement(_graphic8.default, { className: "areasIcon" })
+  }]
+};
+
+var areas = function (_Component) {
+  _inherits(areas, _Component);
+
+  function areas(props) {
+    _classCallCheck(this, areas);
+
+    var _this = _possibleConstructorReturn(this, (areas.__proto__ || Object.getPrototypeOf(areas)).call(this, props));
+
+    _this.state = {
+      selectedareas: '',
+      modalToggled: false
+    };
+    return _this;
+  }
+
+  _createClass(areas, [{
+    key: "closeModal",
+    value: function closeModal() {
+      this.setState({
+        modalToggled: false
+      });
+    }
+  }, {
+    key: "nextModal",
+    value: function nextModal(selected) {
+      var index = areasData.areases.indexOf(selected);
+      if (index + 2 > areasData.areases.length) {
+        var nextareasName = areasData.areases[0];
+      } else {
+        var nextareasName = areasData.areases[index + 1];
+      }
+      this.setState({
+        selectedareas: nextareasName
+      });
+    }
+  }, {
+    key: "prevModal",
+    value: function prevModal(selected) {
+      var index = areasData.areases.indexOf(selected);
+      if (index - 1 < 0) {
+        var nextareasName = areasData.areases[areasData.areases.length - 1];
+      } else {
+        var nextareasName = areasData.areases[index - 1];
+      }
+      this.setState({
+        selectedareas: nextareasName
+      });
+    }
+  }, {
+    key: "toggleModal",
+    value: function toggleModal(selected) {
+      this.setState({
+        modalToggled: true,
+        selectedareas: selected
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var areasesList = areasData.areases.map(function (areas, index) {
+        return _react2.default.createElement(
+          "li",
+          { className: "areas", key: areas.id, onClick: function onClick() {
+              return _this2.toggleModal(areas);
+            } },
+          areas.svg,
+          _react2.default.createElement("h3", { dangerouslySetInnerHTML: { __html: areas.title } }),
+          _react2.default.createElement(_graphic4.default, { className: "backIcon" }),
+          _react2.default.createElement("p", { dangerouslySetInnerHTML: { __html: areas.desc } })
+        );
+      });
+      var areasModal = _react2.default.createElement(_areasModal2.default, { areas: this.state.selectedareas,
+        areases: areasData.areases,
+        changeareas: this.toggleModal.bind(this),
+        prevModal: this.prevModal.bind(this),
+        nextModal: this.nextModal.bind(this),
+        closeModal: this.closeModal.bind(this) });
+
+      var isModalToggled = this.state.modalToggled ? areasModal : null;
+      var mobileAway = this.state.modalToggled ? 'hideMe' : null;
+      return _react2.default.createElement(
+        "div",
+        { className: "areasContainer" },
+        isModalToggled,
+        _react2.default.createElement(
+          "ul",
+          { className: "areasList " + mobileAway },
+          areasesList
+        )
+      );
+    }
+  }]);
+
+  return areas;
+}(_react.Component);
+
+exports.default = areas;
+
+/***/ }),
+/* 316 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _graphic = __webpack_require__(306);
+
+var _graphic2 = _interopRequireDefault(_graphic);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AreasModal = function (_Component) {
+  _inherits(AreasModal, _Component);
+
+  function AreasModal(props) {
+    _classCallCheck(this, AreasModal);
+
+    return _possibleConstructorReturn(this, (AreasModal.__proto__ || Object.getPrototypeOf(AreasModal)).call(this, props));
+  }
+
+  _createClass(AreasModal, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var areas = this.props.areas;
+      var areasList = this.props.areases.map(function (areas, index) {
+        return _react2.default.createElement(
+          "li",
+          { key: areas.id + "listed", onClick: function onClick() {
+              return _this2.props.changeareas(areas);
+            } },
+          _react2.default.createElement(
+            "span",
+            null,
+            areas.id
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            areas.title
+          )
+        );
+      });
+      var areasId = "areas" + areas.id;
+      var svg = areas.svg;
+      return _react2.default.createElement(
+        "div",
+        { className: "areasModal" },
+        _react2.default.createElement("a", { className: "close", onClick: function onClick() {
+            return _this2.props.closeModal();
+          } }),
+        _react2.default.createElement("a", { className: "next", onClick: function onClick() {
+            return _this2.props.nextModal(areas);
+          } }),
+        _react2.default.createElement("a", { className: "next prev", onClick: function onClick() {
+            return _this2.props.prevModal(areas);
+          } }),
+        _react2.default.createElement("h3", { dangerouslySetInnerHTML: { __html: areas.title } }),
+        svg,
+        _react2.default.createElement("p", { dangerouslySetInnerHTML: { __html: areas.desc } })
+      );
+    }
+  }]);
+
+  return AreasModal;
+}(_react.Component);
+
+exports.default = AreasModal;
+
+/***/ }),
+/* 317 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function Graphic6 (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M250,164.6c-22.8,0-44.2,8.9-60.4,25c-16.1,16.1-25,37.5-25,60.4c0,22.8,8.9,44.2,25,60.4\n\t\tc16.1,16.1,37.5,25,60.4,25c22.8,0,44.2-8.9,60.4-25c16.1-16.1,25-37.5,25-60.4c0-22.8-8.9-44.2-25-60.4\n\t\tC294.2,173.5,272.8,164.6,250,164.6z M250,192.2c15.4,0,29.9,6,40.9,16.9c10.9,10.9,16.9,25.4,16.9,40.8c0,15.4-6,29.9-16.9,40.8\n\t\tc-10.9,10.9-25.5,17.1-40.9,17.1c-15.4,0-29.9-6-40.8-16.9c-10.9-10.9-16.9-25.4-16.9-40.9c0-15.4,6-29.9,16.9-40.9\n\t\tC220.1,198.2,234.6,192.2,250,192.2z","key":0}),React.createElement("path",{"d":"M483.8,192.7h-52.2c-3.3-10.6-7.6-20.9-12.7-30.7l36.9-36.9c5.4-5.4,5.4-14.1,0-19.5l-61.3-61.3\n\t\tc-2.7-2.7-6.2-4-9.8-4c-3.5,0-7.1,1.3-9.8,4L338,81.2c-9.8-5.1-20.1-9.4-30.7-12.7V16.3c0-3.7-1.5-7.2-4-9.8c-2.5-2.6-6.3-4-9.9-4\n\t\th-86.8c-7.6,0-13.8,6.2-13.8,13.8v52.2c-10.6,3.3-20.9,7.6-30.7,12.7l-36.9-36.9c-2.7-2.7-6.2-4-9.8-4c-3.6,0-7.1,1.3-9.8,4\n\t\tl-61.3,61.3c-5.4,5.4-5.4,14.1,0,19.5L81.2,162c-5.1,9.8-9.4,20.1-12.7,30.7H16.3c-7.6,0-13.8,6.2-13.8,13.8v86.8\n\t\tc0,7.6,6.2,13.8,13.8,13.8h52.2c3.3,10.6,7.6,20.9,12.7,30.7l-36.9,36.9c-5.4,5.4-5.4,14.1,0,19.5l61.3,61.3c2.7,2.7,6.2,4,9.8,4\n\t\tc3.6,0,7.1-1.3,9.8-4l36.9-36.9c9.8,5.1,20.1,9.4,30.8,12.7v52.2c0,7.6,6.2,13.8,13.8,13.8h86.8c7.6,0,13.8-6.2,13.8-13.8v-52.2\n\t\tc10.6-3.3,20.9-7.6,30.7-12.7l36.9,36.9c2.7,2.7,6.2,4,9.8,4c3.5,0,7.1-1.3,9.8-4l61.3-61.3c5.4-5.4,5.4-14.1,0-19.5l-36.9-36.9\n\t\tc5.1-9.8,9.4-20.1,12.7-30.7h52.2c7.6,0,13.8-6.2,13.8-13.8v-86.8C497.6,198.9,491.4,192.7,483.8,192.7z M407.7,290\n\t\tc-3.9,15.3-9.9,29.9-17.9,43.2c-3.2,5.4-2.4,12.4,2.1,16.8l34.5,34.5l-41.8,41.8l-34.5-34.5c-2.7-2.7-6.2-4-9.8-4\n\t\tc-2.4,0-4.9,0.6-7.1,2c-13.4,8-28,14.1-43.2,17.9c-6.1,1.5-10.4,7-10.4,13.4V470h-59.2v-48.8c0-6.3-4.3-11.8-10.4-13.4\n\t\tc-15.3-3.9-29.8-9.9-43.2-17.9c-2.2-1.3-4.6-1.9-7.1-1.9c-3.6,0-7.1,1.4-9.8,4l-34.5,34.5l-41.8-41.8l34.5-34.5\n\t\tc4.5-4.5,5.3-11.4,2.1-16.8c-8-13.4-14-27.9-17.9-43.2c-1.5-6.1-7.1-10.4-13.4-10.4H30v-59.2h48.9c6.3,0,11.8-4.3,13.4-10.4\n\t\tc3.8-15.2,9.8-29.8,17.9-43.2c3.2-5.4,2.4-12.4-2.1-16.8l-34.5-34.5l41.8-41.8l34.5,34.5c2.7,2.4,6.2,3.7,9.8,3.7\n\t\tc2.4,0,4.9-0.6,7.1-2c13.4-8,27.9-14,43.2-17.9c6.1-1.6,10.4-7.1,10.4-13.4V30.1h59.2V79c0,6.3,4.3,11.8,10.4,13.4\n\t\tc15.3,3.9,29.8,9.9,43.2,17.9c2.2,1.3,4.7,2,7.1,2c3.6,0,7.1-1.4,9.8-4.1l34.5-34.5l41.8,41.8L391.9,150\n\t\tc-4.5,4.5-5.3,11.4-2.1,16.8c8,13.3,14,27.9,17.9,43.2c1.5,6.1,7.1,10.4,13.4,10.4H470v59.2h-48.9\n\t\tC414.8,279.6,409.3,283.9,407.7,290z","key":1})]);
+}
+
+Graphic6.displayName = "Graphic6";
+
+Graphic6.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 500 500","style":{"enableBackground":"new 0 0 500 500"},"xmlSpace":"preserve"};
+
+module.exports = Graphic6;
+
+Graphic6.default = Graphic6;
+
+
+/***/ }),
+/* 318 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function Graphic7 (props) {
+    return React.createElement("svg",props,[React.createElement("linearGradient",{"id":"1graphic7","gradientUnits":"userSpaceOnUse","x1":"1.1664","y1":"281.9263","x2":"228.3452","y2":"281.9263","key":0},[React.createElement("stop",{"offset":"0","style":{"stopColor":"#00FFFF"},"key":0}),React.createElement("stop",{"offset":"1","style":{"stopColor":"#0000FF"},"key":1})]),React.createElement("polygon",{"fill":"url(#1graphic7)","points":"1.2,563 228.3,434 228.3,0.8 1.2,131.8 ","key":1})]);
+}
+
+Graphic7.displayName = "Graphic7";
+
+Graphic7.defaultProps = {"version":"1.1","x":"0px","y":"0px","viewBox":"0 0 459.2 563.4","style":{"enableBackground":"new 0 0 459.2 563.4"},"xmlSpace":"preserve"};
+
+module.exports = Graphic7;
+
+Graphic7.default = Graphic7;
+
+
+/***/ }),
+/* 319 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function Graphic8 (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M250,30.4c121.1,0,219.6,98.5,219.6,219.6S371.1,469.6,250,469.6c-121.1,0-219.6-98.5-219.6-219.6\n\t\tS128.9,30.4,250,30.4 M250,1.3C112.6,1.3,1.2,112.6,1.2,250c0,137.4,111.4,248.7,248.8,248.7c137.4,0,248.8-111.4,248.8-248.7\n\t\tC498.8,112.6,387.4,1.3,250,1.3L250,1.3z","key":0}),React.createElement("path",{"d":"M221,358.2c-3.2,0-6.5-1.1-9.2-3.3l-86.2-70.1c-6.2-5.1-7.2-14.3-2.1-20.5c5.1-6.2,14.3-7.2,20.5-2.1\n\t\t\tl75.1,61.1l135.7-159c5.2-6.1,14.4-6.8,20.5-1.6c6.1,5.2,6.9,14.4,1.6,20.5L232.1,353.1C229.2,356.4,225.1,358.2,221,358.2z","key":1})]);
+}
+
+Graphic8.displayName = "Graphic8";
+
+Graphic8.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 500 500","style":{"enableBackground":"new 0 0 500 500"},"xmlSpace":"preserve"};
+
+module.exports = Graphic8;
+
+Graphic8.default = Graphic8;
+
+
+/***/ }),
+/* 320 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var React = __webpack_require__(1);
+
+function Graphic9 (props) {
+    return React.createElement("svg",props,[React.createElement("path",{"d":"M17.3,259.8c-5.4,0-9.8-4.4-9.8-9.8C7.5,116.3,116.3,7.5,250,7.5c28.9,0,57.1,5,83.8,14.8\n\t\t\tc26.6,9.8,51.2,24.2,73,42.7l9.8,8.3L412,49c-0.5-2.6,0.1-5.2,1.5-7.4c1.5-2.2,3.7-3.6,6.3-4.1c0.6-0.1,1.2-0.2,1.9-0.2\n\t\t\tc4.7,0,8.7,3.4,9.6,8l9.8,52.4c0.5,2.9-0.2,5.8-2.1,8.1c-1.9,2.3-4.6,3.5-7.6,3.5h-55.7c-5.4,0-9.8-4.4-9.8-9.8s4.4-9.8,9.8-9.8\n\t\t\th29.6l-9.2-8C355.8,46.6,303.8,27.1,250,27.1c-122.9,0-222.9,100-222.9,222.9C27.1,255.4,22.7,259.8,17.3,259.8z","key":0}),React.createElement("path",{"d":"M250,12.1c28.3,0,56,4.9,82.2,14.5c26.1,9.6,50.2,23.7,71.6,41.9l19.6,16.7l-4.7-25.3l-2.2-11.7\n\t\t\tc-0.3-1.4,0-2.8,0.8-3.9c0.8-1.2,2-1.9,3.4-2.2c0.3-0.1,0.7-0.1,1-0.1c2.5,0,4.7,1.8,5.1,4.3l9.8,52.4c0.3,1.5-0.1,3.1-1.1,4.3\n\t\t\tc-1,1.2-2.5,1.9-4,1.9h-55.7c-2.9,0-5.3-2.4-5.3-5.3c0-2.9,2.4-5.3,5.3-5.3h17.4h24.3l-18.3-16c-20.6-18-44-31.9-69.3-41.4\n\t\t\tc-25.5-9.5-52.3-14.4-79.9-14.4c-125.4,0-227.4,102-227.4,227.4c0,2.9-2.4,5.3-5.3,5.3s-5.3-2.4-5.3-5.3\n\t\t\tC12.1,118.8,118.8,12.1,250,12.1 M250,3C113.8,3,3,113.8,3,250c0,7.9,6.4,14.4,14.4,14.4c7.9,0,14.4-6.4,14.4-14.4\n\t\t\tc0-120.4,97.9-218.3,218.3-218.3c53.2,0,103.5,18.9,143.2,53.5h-17.4c-7.9,0-14.4,6.4-14.4,14.4c0,7.9,6.4,14.4,14.4,14.4h55.7\n\t\t\tc4.3,0,8.3-1.9,11.1-5.2c2.7-3.3,3.9-7.6,3.1-11.8l-9.8-52.4c-1.3-6.9-7.3-11.7-14.1-11.7c-0.9,0-1.8,0.1-2.7,0.3\n\t\t\tc-7.8,1.5-12.9,9-11.5,16.8l2.2,11.7C365.2,23.6,309.2,3,250,3L250,3z","key":1}),React.createElement("path",{"d":"M250,492.5c-58.1,0-114.4-20.9-158.4-58.9l-9.9-8.5l5,26.6c0.5,2.6-0.1,5.2-1.5,7.4c-1.5,2.2-3.7,3.6-6.3,4.1\n\t\t\tc-0.6,0.1-1.2,0.2-1.8,0.2c-4.7,0-8.8-3.4-9.6-8l-9.8-52.4c-0.5-2.9,0.2-5.8,2.1-8.1c1.9-2.3,4.6-3.5,7.6-3.5H123\n\t\t\tc5.4,0,9.8,4.4,9.8,9.8s-4.4,9.8-9.8,9.8H95.4l9.3,8c40.4,34.8,92,53.9,145.3,53.9c122.9,0,222.9-100,222.9-222.9\n\t\t\tc0-5.4,4.4-9.8,9.8-9.8s9.8,4.4,9.8,9.8C492.5,383.7,383.7,492.5,250,492.5z","key":2}),React.createElement("path",{"d":"M482.7,244.7c2.9,0,5.3,2.4,5.3,5.3c0,131.2-106.7,237.9-237.9,237.9c-57.1,0-112.2-20.5-155.4-57.8l-19.7-17\n\t\t\tl4.8,25.6l2.6,13.8c0.5,2.8-1.3,5.6-4.2,6.1c-0.3,0.1-0.6,0.1-1,0.1c-2.5,0-4.7-1.8-5.2-4.3l-9.8-52.4c-0.3-1.5,0.1-3.1,1.1-4.3\n\t\t\tc1-1.2,2.5-1.9,4-1.9H123c2.9,0,5.3,2.4,5.3,5.3c0,2.9-2.4,5.3-5.3,5.3h-15.4H83.1l18.6,16c41.2,35.5,93.9,55,148.3,55\n\t\t\tc125.4,0,227.4-102,227.4-227.4C477.4,247.1,479.8,244.7,482.7,244.7 M482.7,235.6c-7.9,0-14.4,6.4-14.4,14.4\n\t\t\tc0,120.4-97.9,218.3-218.3,218.3c-52.4,0-102.8-18.7-142.4-52.8H123c7.9,0,14.4-6.4,14.4-14.4c0-7.9-6.4-14.4-14.4-14.4H67.3\n\t\t\tc-4.3,0-8.3,1.9-11.1,5.2c-2.7,3.3-3.9,7.6-3.1,11.8l9.8,52.4c1.3,6.9,7.3,11.7,14.1,11.7c0.9,0,1.8-0.1,2.7-0.2\n\t\t\tc7.8-1.5,12.9-9,11.5-16.8l-2.6-13.8c44.8,38.7,102,60,161.3,60c136.2,0,247-110.8,247-247C497,242.1,490.6,235.6,482.7,235.6\n\t\t\tL482.7,235.6z","key":3}),React.createElement("path",{"d":"M288.9,392.5c-14.4,0-26.2-11.8-26.2-26.2c0-4.1,0.9-8,2.8-11.7l1.2-2.5l-54.8-76.4l-2.7,0.4\n\t\t\tc-1.2,0.2-2.4,0.2-3.5,0.2c-0.9,0-1.8,0-2.7-0.1l-2.7-0.3l-34.3,51.5l1.3,2.4c2.1,3.8,3.2,8.1,3.2,12.5\n\t\t\tc0,14.4-11.8,26.2-26.2,26.2c-14.4,0-26.2-11.8-26.2-26.2s11.8-26.2,26.2-26.2c0.9,0,1.8,0,2.7,0.1l2.7,0.3l34.3-51.5l-1.3-2.4\n\t\t\tc-2.1-3.8-3.2-8.1-3.2-12.5c0-14.4,11.8-26.2,26.2-26.2s26.2,11.8,26.2,26.2c0,4.1-0.9,8-2.8,11.7l-1.2,2.5l54.8,76.4l2.7-0.4\n\t\t\tc0.9-0.1,1.9-0.2,2.8-0.2l2.7-0.1l73.2-147.8l-1.6-2.2c-3.2-4.5-4.9-9.8-4.9-15.3c0-14.4,11.8-26.2,26.2-26.2s26.2,11.8,26.2,26.2\n\t\t\tc0,14.3-11.2,25.8-25.5,26.2l-2.7,0.1l-73.2,147.8l1.6,2.2c3.2,4.5,5,9.8,5,15.3C315.1,380.8,303.4,392.5,288.9,392.5z","key":4}),React.createElement("path",{"d":"M383.8,153.1c11.9,0,21.6,9.7,21.6,21.6c0,11.8-9.3,21.3-21.1,21.6l-5.5,0.1l-2.4,4.9l-70.7,142.8l-2.4,4.9\n\t\t\tl3.2,4.5c2.7,3.7,4.1,8.1,4.1,12.6c0,11.9-9.7,21.6-21.6,21.6c-11.9,0-21.6-9.7-21.6-21.6c0-3.4,0.8-6.6,2.3-9.7l2.5-4.9l-3.2-4.5\n\t\t\tl-51.6-72l-3.2-4.5l-5.4,0.7c-1,0.1-2,0.2-2.9,0.2c-0.7,0-1.5,0-2.2-0.1l-5.5-0.6l-3,4.6l-31.3,46.9l-3,4.6l2.6,4.8\n\t\t\tc1.7,3.2,2.6,6.7,2.6,10.3c0,11.9-9.7,21.6-21.6,21.6c-11.9,0-21.6-9.7-21.6-21.6c0-11.9,9.7-21.6,21.6-21.6c0.7,0,1.5,0,2.2,0.1\n\t\t\tl5.5,0.6l3-4.6l31.3-46.9l3-4.6l-2.6-4.8c-1.7-3.2-2.6-6.7-2.6-10.3c0-11.9,9.7-21.6,21.6-21.6c11.9,0,21.6,9.7,21.6,21.6\n\t\t\tc0,3.4-0.8,6.6-2.3,9.7l-2.5,4.9l3.2,4.5l51.6,72l3.2,4.5l5.4-0.7c0.8-0.1,1.6-0.2,2.4-0.2l5.5-0.1l2.4-4.9L367,196.8l2.4-4.9\n\t\t\tl-3.2-4.5c-2.7-3.7-4.1-8.1-4.1-12.6C362.1,162.9,371.8,153.1,383.8,153.1 M383.8,144c-17,0-30.8,13.8-30.8,30.8\n\t\t\tc0,6.7,2.2,12.9,5.8,18l-70.7,142.8c-1.1,0-2.2,0.1-3.3,0.3l-51.6-72c2.1-4.1,3.2-8.8,3.2-13.7c0-17-13.8-30.8-30.8-30.8\n\t\t\tc-17,0-30.8,13.8-30.8,30.8c0,5.3,1.3,10.3,3.7,14.7l-31.3,46.9c-1-0.1-2.1-0.2-3.1-0.2c-17,0-30.8,13.8-30.8,30.8\n\t\t\tc0,17,13.8,30.8,30.8,30.8c17,0,30.8-13.8,30.8-30.8c0-5.3-1.3-10.3-3.7-14.7l31.3-46.9c1,0.1,2.1,0.2,3.1,0.2\n\t\t\tc1.4,0,2.8-0.1,4.2-0.3l51.6,72c-2.1,4.1-3.2,8.8-3.2,13.7c0,17,13.8,30.8,30.8,30.8c17,0,30.8-13.8,30.8-30.8\n\t\t\tc0-6.7-2.2-12.9-5.8-18l70.7-142.8c16.6-0.4,29.9-14,29.9-30.7C414.5,157.8,400.8,144,383.8,144L383.8,144z","key":5})]);
+}
+
+Graphic9.displayName = "Graphic9";
+
+Graphic9.defaultProps = {"version":"1.1","id":"Layer_1","x":"0px","y":"0px","viewBox":"0 0 500 500","style":{"enableBackground":"new 0 0 500 500"},"xmlSpace":"preserve"};
+
+module.exports = Graphic9;
+
+Graphic9.default = Graphic9;
+
 
 /***/ })
 /******/ ]);

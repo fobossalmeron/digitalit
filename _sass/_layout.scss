@@ -25,6 +25,10 @@
     }
 }
 
+#serviceareas {
+    padding-bottom: 0;
+}
+
 header {
     background-color: transparent;
     &.headerScroll {
@@ -248,7 +252,7 @@ header {
             position: absolute;
             bottom: 0;
             left: 0;
-            height: 6px;
+            height: 5px;
             background: linear-gradient(to right, #0000FF, #00FFFF);
         }
     }
@@ -269,7 +273,7 @@ header {
             position: absolute;
             bottom: -5px;
             left: 0;
-            height: 6px;
+            height: 5px;
             background: linear-gradient(to right, #0000FF, #00FFFF);
         }
     }
@@ -370,6 +374,164 @@ header {
                 font-size: 2.1rem;
                 display: flex;
                 line-height: 1.5;
+            }
+        }
+    }
+}
+
+.screen7 {
+    display: flex;
+    flex-direction: column;
+    h4 {
+        font-family: $secondary-font-family;
+        font-weight: bold;
+        display: flex;
+        align-self: flex-start;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        margin-left: 5%;
+        padding: .5% 2%;
+        margin-bottom: 1%;
+        background: linear-gradient(to right, #0000FF, #00FFFF);
+    }
+    h3 {
+        font-weight: bold;
+        margin-left: 5%;
+        font-size: 2.3rem;
+        margin-bottom: 5px;
+        padding: 0 5px 0 0;
+        display: flex;
+        align-self: flex-start;
+        &:after {
+            content: ' ';
+            min-width: 10px;
+            width: 100%;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(to right, #0000FF, #00FFFF);
+        }
+    }
+    p {
+        font-size: 2.9rem;
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+    .subbed {
+        padding: 4% 0 4% 5%;
+        display: flex;
+        flex-direction: column;
+        p {
+            font-size: 2.2rem;
+        }
+    }
+    .inMenu {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5%;
+        h4 {
+            align-self: unset;
+        }
+    }
+}
+
+.screen8 {
+  align-content: flex-start;
+  min-height: 80vh;
+    h2 {
+        font-size: 5rem;
+        margin-top: 10%;
+        font-family: "Eurostile LT", sans-serif;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 5%;
+    }
+    .areasContainer {
+      position: relative;
+        h3 {
+            font-weight: bold;
+        }
+        .areasList {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 3rem;
+            list-style: none;
+            li {
+                position: relative;
+                .areasIcon {
+                    fill: white;
+                    max-width: 100px;
+                    left: 50%;
+                    position: relative;
+                    transform: translateX(-50%);
+                    margin-bottom: 5%;
+                    margin-top: 30%;
+                    transition: .3s ease all;
+                }
+                .backIcon {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    z-index: -1;
+                    transition: .3s ease all;
+                }
+                h3 {
+                    text-align: center;
+                    font-size: 2.5rem;
+                    padding: 0 5%;
+                    font-weight: 400;
+                    transition: .3s ease all;
+                    margin-bottom: 30%;
+                }
+                p {
+                    opacity: 0;
+                    font-size:0rem;
+                }
+                &:hover {
+                  .areasIcon{
+                    opacity:0;
+                    height:0;
+                  }
+                  .backIcon{
+                    opacity:0;
+                  }
+                  h3{
+                    text-align:left;
+                    padding: 0;
+                    margin-bottom: 2%;
+                  }
+                    p {
+                        opacity: 1;
+                        font-size:2rem;
+                    }
+                }
+            }
+        }
+        .areasModal {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 5%;
+            background-color: black;
+            z-index: 1;
+            h3{
+              text-align:left;
+              font-size: 2.5rem;
+              padding: 0;
+            }
+              p {
+                  opacity: 1;
+                  font-size:2rem;
+              }
+            svg{
+              position: relative;
+              fill:white;
+              max-width: 100px;
+              margin-bottom: 3%;
             }
         }
     }
