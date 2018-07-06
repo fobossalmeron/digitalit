@@ -193,7 +193,7 @@ header {
 .screen3 {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 5fr .1fr .1fr .1fr;
-    padding: 8%;
+    padding: 8% 8% 15% 8%;
     grid-gap: 15px;
     grid-row-gap: 40px;
     .box {
@@ -437,8 +437,8 @@ header {
 }
 
 .screen8 {
-  align-content: flex-start;
-  min-height: 80vh;
+    align-content: flex-start;
+    min-height: 80vh;
     h2 {
         font-size: 5rem;
         margin-top: 10%;
@@ -448,7 +448,8 @@ header {
         margin-bottom: 5%;
     }
     .areasContainer {
-      position: relative;
+        position: relative;
+        min-height: 50vh;
         h3 {
             font-weight: bold;
         }
@@ -483,34 +484,36 @@ header {
                     padding: 0 5%;
                     font-weight: 400;
                     transition: .3s ease all;
-                    margin-bottom: 30%;
+                    margin-bottom: 15%;
                 }
                 p {
                     opacity: 0;
-                    font-size:0rem;
+                    font-size: 0rem;
                 }
                 &:hover {
-                  .areasIcon{
-                    opacity:0;
-                    height:0;
-                  }
-                  .backIcon{
-                    opacity:0;
-                  }
-                  h3{
-                    text-align:left;
-                    padding: 0;
-                    margin-bottom: 2%;
-                  }
+                    .areasIcon {
+                        opacity: 0;
+                        height: 0;
+                    }
+                    .backIcon {
+                        opacity: 0;
+                    }
+                    h3 {
+                        text-align: left;
+                        padding: 0;
+                        margin-bottom: 2%;
+                    }
                     p {
                         opacity: 1;
-                        font-size:2rem;
+                        font-size: 2rem;
                     }
                 }
             }
         }
         .areasModal {
             position: absolute;
+            display: flex;
+            flex-direction: column;
             top: 0;
             left: 0;
             bottom: 0;
@@ -518,21 +521,285 @@ header {
             padding: 5%;
             background-color: black;
             z-index: 1;
-            h3{
-              text-align:left;
-              font-size: 2.5rem;
-              padding: 0;
+            display: none;
+            h3 {
+                text-align: left;
+                font-size: 2.5rem;
+                padding: 0;
             }
-              p {
-                  opacity: 1;
-                  font-size:2rem;
-              }
-            svg{
-              position: relative;
-              fill:white;
-              max-width: 100px;
-              margin-bottom: 3%;
+            p {
+                opacity: 1;
+                font-size: 2rem;
+                padding-bottom: 10%;
+            }
+            svg {
+                position: relative;
+                fill: white;
+                max-width: 100px;
+                margin-bottom: 3%;
             }
         }
     }
+}
+
+#work {
+    max-width: none;
+    padding: 0 0 7% 0;
+    .clients {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(6, 1fr);
+        justify-self: center;
+        max-width: 1150px;
+        margin-bottom: 5%;
+        svg {
+            fill: white;
+            &:nth-of-type(5) {
+                padding: 0 10% 0 40%;
+            }
+        }
+    }
+}
+
+.workScreen {
+    display: grid;
+    grid-template-columns: .9fr .65fr .9fr;
+    grid-template-rows: .8fr 1.1fr 1fr 1fr;
+    &.workFollow {
+        grid-template-columns: 1fr .3fr .4fr 1.2fr 1.5fr;
+        grid-template-rows: .8fr 1.1fr 0.6fr;
+        .image {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            background-image: url("./../img/work/Ludbeck.jpg");
+            &~.image {
+                background-image: url("./../img/work/novoNordisk.png");
+                grid-column: 5 / span 1;
+                grid-row: 1 / span 2;
+                &~.image {
+                    background-image: url("./../img/work/myBlueDoctor.jpg");
+                    grid-column: 3 / span 2;
+                    grid-row: 3 / span 1;
+                }
+            }
+        }
+        .gradient {
+            grid-column: 2 / span 3;
+            grid-row: 1 /span 1;
+            &~.gradient {
+                grid-column: 1 / span 2;
+                grid-row: 3 /span 1;
+                svg {
+                    align-self: flex-start;
+                    width: 100px;
+                }
+                &~.gradient {
+                    grid-column: 5 / span 1;
+                    grid-row: 3 /span 1;
+                    svg {
+                        align-self: center;
+                        width: auto;
+                    }
+                }
+            }
+        }
+        .video {
+            grid-column: 1 / span 4;
+            grid-row: 2 / span 1;
+            background-size: cover;
+            background-position: 0;
+            &:after {
+                background-image: url("./../img/work/video4.jpg");
+            }
+        }
+    }
+    .left {
+      &:before{
+        position: absolute;
+        display: inline-block;
+        border-top: 20px solid transparent;
+        border-right: 18px solid #0000FF;
+        border-bottom: 20px solid transparent;
+        border-right-color: #0000FF;
+        left: -18px;
+        top: 45%;
+        content: '';
+      }
+    }
+    .right {
+      &:before{
+        position: absolute;
+        display: inline-block;
+        border-top: 20px solid transparent;
+        border-left: 18px solid #00FFFF;
+        border-bottom: 20px solid transparent;
+        border-left-color: #00FFFF;
+        right: -18px;
+        top: 45%;
+        content: '';
+      }
+    }
+    .top {
+      &:after{
+        position: absolute;
+        display: inline-block;
+        border-left: 20px solid transparent;
+        border-bottom: 18px solid #388EF9;
+        border-right: 20px solid transparent;
+        border-bottom-color: #388EF9;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+      }
+    }
+    .bottom {
+      &:after{
+        position: absolute;
+        display: inline-block;
+        border-left: 20px solid transparent;
+        border-top: 18px solid #388EF9;
+        border-right: 20px solid transparent;
+        border-top-color: #388EF9;
+        bottom: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        content: '';
+      }
+    }
+    .gradient {
+        padding: 10%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(to right, #0000FF, #00FFFF);
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        &~.gradient {
+            grid-column: 3 / span 1;
+            grid-row: 2 / span 1;
+            &~.gradient {
+                grid-column: 1 / span 1;
+                grid-row: 3 / span 1;
+            }
+        }
+        svg {
+            fill: white;
+            margin-bottom: 5%;
+            max-width: 250px;
+            justify-self: center;
+        }
+        p {
+            font-size: 2.3rem;
+        }
+    }
+    .image {
+        background-position: 50%;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        background-image: url("./../img/work/moneyAmigo.jpg");
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        &~.image {
+            background-image: url("./../img/work/amigoHealth.jpg");
+            grid-column: 2 / span 2;
+            grid-row: 3 / span 2;
+        }
+    }
+    .video {
+        width: 100%;
+        height: 100%;
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+        transition: .3s ease all;
+        position: relative;
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        &:after {
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-size: cover;
+            background-image: url(./../img/work/video1.jpg);
+            opacity: 0.8;
+            transition: .3s ease all;
+            z-index: -1;
+            cursor: pointer;
+            background-position: 50%;
+        }
+        svg {
+            fill: white;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 40%;
+        }
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+        &~.video {
+            grid-column: 2 / span 1;
+            grid-row: 2 / span 1;
+            &:after {
+                background-image: url(./../img/work/video2.jpg);
+            }
+            &~.video {
+                grid-column: 1 / span 1;
+                grid-row: 4 / span 1;
+                &:after {
+                    background-image: url(./../img/work/video3.jpg);
+                }
+            }
+        }
+        iframe {
+            width: auto !important;
+            height: 100% !important;
+        }
+    }
+}
+
+.modal {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    background-color: transparent;
+    transition: .3s ease all;
+    &:focus {
+        outline: none;
+    }
+    .video {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .3s ease all;
 }
