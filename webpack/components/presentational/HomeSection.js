@@ -6,13 +6,7 @@ class HomeSection extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      fullVideo: false,
-      playing: false,
-      loop: true,
-      muted: true,
-      playsinline: true,
-      url: "assets/video/intro.mp4",
-      playerKey: "oneKey"
+      playing: false
     };
   }
 
@@ -35,8 +29,7 @@ class HomeSection extends Component {
         <div id="homevideo">
           <div className="video_overlay" />
           <ReactPlayer
-            key={this.state.playerKey}
-            url={this.state.url}
+            url="./assets/video/intro.mp4"
             playing={this.state.playing}
             loop={true}
             muted={true}
