@@ -4,7 +4,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i');
 
-// Our variables
 $base-font-family: 'Titillium Web', sans-serif;
 $secondary-font-family: 'Eurostile LT', sans-serif;
 $base-font-size:   1rem;
@@ -22,39 +21,9 @@ $black: #383838;
 $white: #f9f9f9;
 $brand-main-color: white;
 
-$twitter:#02BAF8;
-$mail:#d14836;
-$facebook:#3B5999;
-$tumblr:#3C5A76;
-
-// Responsive width breakpoints
-$x400-down:          400px;
-$x500-down:          500px;
-$x700-down:          700px;
-$x600-down:          600px;
-$x800-down:          800px;
-$x900-down:          900px;
-$x1000-down:  		 1000px;
-$x1100-down:         1100px;
-
-// Responsive height breakpoints
-$minimum-height:     350px;
-$mobile-down:        550px;
-$tablet-down:        980px;
-$menu-down:         1000px;
-$full-down:         1150px;
-
-
 //Site.baseurl
 $baseurl: "{{site.baseurl}}";
 
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;
@@ -67,9 +36,6 @@ $baseurl: "{{site.baseurl}}";
     }
 }
 
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	    "mixins",
         "dsgeneric",

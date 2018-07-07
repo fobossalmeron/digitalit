@@ -10,15 +10,15 @@ class Nav extends Component {
     super(props);
     this.state = {
       relative: false,
-      menuOn: false
+      menuToggled: false
     };
     this.navScrollMagic = this.navScrollMagic.bind(this);
-    this.doToggleMenu = this.doToggleMenu.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
     this.doHideNav = this.doHideNav.bind(this);
   }
 
-  doToggleMenu() {
-    this.setState({ menuOn: !this.state.menuOn });
+  toggleMenu() {
+    this.setState({ menuToggled: !this.state.menuToggled });
     document.body.classList.toggle("restrictBody");
     document.addEventListener("touchstart", this.touchstart);
     document.addEventListener("touchmove", this.touchmove);
@@ -30,7 +30,7 @@ class Nav extends Component {
     }
   }
   doHideNav() {
-    this.setState({ menuOn: false });
+    this.setState({ menuToggled: false });
     document.body.classList.remove("restrictBody");
     document.removeEventListener("touchstart", this.touchstart);
     document.removeEventListener("touchmove", this.touchmove);
@@ -59,7 +59,7 @@ class Nav extends Component {
       event.preventDefault();
       this.props.scrollToAbout();
       if (window.history && window.history.pushState) {
-        history.pushState("", document.title, "#who&what");
+        history.pushState("", document.title, "#what&how");
       }
     }
   }
@@ -97,7 +97,7 @@ class Nav extends Component {
     });
     var logoScene = new ScrollMagic.Scene({
       triggerElement: "body",
-      offset: 15
+      offset: 20
     })
       .setClassToggle("header", "headerScroll")
       .addTo(controllerX);
@@ -105,74 +105,74 @@ class Nav extends Component {
 
   render() {
     var baseUrl = this.state.relative ? this.props.relativePath : "";
-    var isActive = this.state.menuOn ? "menuActive" : "";
-    var navIsActive = this.state.menuOn ? "navActive" : "";
-    var navToggled = this.state.menuOn ? "toggled" : "";
+    var navIsActive = this.state.menuToggled ? "navActive" : "";
+    var navToggled = this.state.menuToggled ? "toggled" : "";
+    var active = this.state.menuToggled ? "active" : ""; 
 
     return (
       <header>
-        <a className="hideText" href="http://designsuccess.com">
-          <DesignSuccess className="designSuccessLogo" />
-          <DesignSuccessMobile className="designSuccessLogoMobile" />
-          design:success
-        </a>
-          <a           onClick={() => {
-            this.doHideNav();
-            this.doScrollToHome(event);
-          }} href={baseUrl + "#home"} className="hideText a">
+        <div className="headerWrapper">
+          <a className="hideText" href="http://designsuccess.com">
+            <DesignSuccess className="designSuccessLogo" />
+            <DesignSuccessMobile className="designSuccessLogoMobile" />
+            design:success
+          </a>
+          <a
+            onClick={() => {
+              this.doHideNav();
+              this.doScrollToHome(event);
+            }}
+            href={baseUrl + "#home"}
+            className="hideText a"
+          >
             <DigitalSuccess className="websiteLogo" id="websiteLogo" />
             digital:success
           </a>
-        <div
-          id="hamburger"
-          className={navToggled}
-          onClick={() => this.toggleNav()}
-        >
           <HamburgerIcon
-            onClick={this.doToggleMenu}
-            className={"menuButton " + isActive}
+            id="hamburger"
+            className={active}
+            onClick={() => this.toggleMenu()}
           />
+          <nav
+            className={active}
+            onClick={() => this.closeNav()}
+          >
+            <ul>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToAbout(event);
+                }}
+              >
+                <a href={baseUrl + "#what&amp;how"}>what &amp; how</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToWork(event);
+                }}
+              >
+                <a href={baseUrl + "#work"}>work</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToServices();
+                }}
+              >
+                <a href={baseUrl + "#serviceareas"}>service areas</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToContact();
+                }}
+              >
+                <a href={baseUrl + "#contact"}>contact</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav
-          id={navIsActive}
-          className={navToggled}
-          onClick={() => this.closeNav()}
-        >
-          <ul>
-          <li
-              onClick={() => {
-                this.doHideNav();
-                this.doScrollToAbout(event);
-              }}
-            >
-              <a href={baseUrl + "#what&amp;how"}>what &amp; how</a>
-            </li>
-            <li
-              onClick={() => {
-                this.doHideNav();
-                this.doScrollToWork(event);
-              }}
-            >
-              <a href={baseUrl + "#work"}>work</a>
-            </li>
-            <li
-              onClick={() => {
-                this.doHideNav();
-                this.doScrollToServices();
-              }}
-            >
-              <a href={baseUrl + "#serviceareas"}>service areas</a>
-            </li>
-            <li
-              onClick={() => {
-                this.doHideNav();
-                this.doScrollToContact();
-              }}
-            >
-              <a href={baseUrl + "#contact"}>contact</a>
-            </li>
-          </ul>
-        </nav>
       </header>
     );
   }

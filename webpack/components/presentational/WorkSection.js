@@ -112,7 +112,7 @@ class WorkSection extends Component {
           <div className="gradient top">
             <ClientNovoNordisk />
             <p>
-            Development of first cross-target application for Novo Nordisk; connecting patients and endocrinologists/doctors in a natural and intuitive way. Increasing compliance and interaction.            </p>
+            Development of first cross-target application for Novo Nordisk; connecting patients and endocrinologists / doctors in a natural and intuitive way. Increasing compliance and interaction.            </p>
           </div>
         </div>
       </section>

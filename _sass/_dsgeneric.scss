@@ -6,24 +6,32 @@ body {
 }
 
 header {
+    width: 100%;
+    height: 45px;
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    transition: .5s ease all;
+  }
+
+.headerWrapper {
     display: flex;
     transition: .3s ease all;
     max-width: 1400px;
     height: 45px;
-    z-index: 10;
     left: 0;
     right: 0;
     top: 0;
     margin: 0 auto;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     font-size: 1.5rem;
     width: 100%;
     box-sizing: border-box;
-    padding: 15px 4% 8px 4%;
+    padding: 15px 4% 8px 11%;
     nav {
-        flex-grow: 1;
         ul {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -49,9 +57,20 @@ header {
             }
         }
     }
-    .designSuccessLogoMobile,
-    .hamburgerIcon {
+    #hamburger {
         display: none;
+        flex-grow: 1;
+        stroke: #fff;
+        stroke-width: 15;
+        height: 40px;
+        max-width: 35px;
+        cursor: pointer;
+    }
+    .designSuccessLogoMobile {
+        display: none;
+        height: 35px;
+        max-width: 35px;
+        cursor: pointer;
     }
     .animated {
         opacity: 0;
@@ -66,7 +85,6 @@ header {
     .a {
         color: white;
         cursor: pointer;
-        flex-grow: 1;
         justify-self: center;
         text-decoration: none;
         display: flex;
@@ -77,10 +95,6 @@ header {
         &:nth-child(1),
         &:nth-child(2) {
             opacity: 1;
-        }
-        &:nth-child(1),
-        &:nth-child(2) {
-            flex-grow: 3;
         }
         &:hover,
         &.active {
@@ -293,7 +307,7 @@ svg {
     }
     .engageLogo {
         grid-area: logo;
-         * {
+        * {
             fill: $brand-main-color;
         }
     }
@@ -370,28 +384,29 @@ svg {
         grid-row-end: last-line;
         z-index: -1;
         margin-left: 5%;
-            .st1 {
-                animation: repulse infinite ease-out 1s;
-                transform-origin: 50% 50%;
-                animation-fill-mode: both;
-                animation-direction: alternate;
-                fill: $brand-main-color;
-            }
-            .st0 {
-                fill: #4f4f4f;
-            }
+        .st1 {
+            animation: repulse infinite ease-out 1s;
+            transform-origin: 50% 50%;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            fill: $brand-main-color;
+        }
+        .st0 {
+            fill: #4f4f4f;
+        }
     }
 }
 
 .close {
     position: absolute;
-    top: 15px;
-    right: 25px;
-    width: 32px;
-    height: 32px;
+    top: 55px;
+    right: 0px;
+    width: 60px;
+    height: 60px;
     opacity: 0.3;
     cursor: pointer;
     transition: .5s ease all;
+    z-index: 1;
 }
 
 .close:hover {
@@ -401,7 +416,7 @@ svg {
 .close:before,
 .close:after {
     position: absolute;
-    left: 15px;
+    left: 35px;
     content: ' ';
     height: 33px;
     width: 2px;
@@ -422,10 +437,11 @@ svg {
     right: 0;
     bottom: 50%;
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 50px;
     opacity: 0.3;
     transition: .5s ease all;
+    z-index: 1;
     cursor: pointer;
     &:hover {
         opacity: 1;
@@ -433,7 +449,7 @@ svg {
     &:before,
     &:after {
         position: absolute;
-        left: 15px;
+        left: 30px;
         content: ' ';
         height: 15px;
         width: 2px;
@@ -442,6 +458,7 @@ svg {
     &:before {
         transform: rotate(-45deg);
         top: -10px;
+        left:30px;
     }
     &:after {
         transform: rotate(45deg);
@@ -450,23 +467,26 @@ svg {
 
 .prev {
     left: 0;
+    z-index: 1;
     &:before {
         transform: rotate(45deg);
+        left:10px;
     }
     &:after {
         transform: rotate(-45deg);
+        left:10px;
     }
 }
 
 @keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 @keyframes repulse {
-  to {
-    transform: scale(1.02);
-    stroke-width: 6;
-  }
+    to {
+        transform: scale(1.02);
+        stroke-width: 6;
+    }
 }
