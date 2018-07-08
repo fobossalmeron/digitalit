@@ -1,104 +1,121 @@
 body {
-  font-size: 1.4rem;
-  margin: 0 auto;
-  width: 100%;
-  color: white;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
 }
 
 header {
-  position: fixed;
-  display: flex;
-  max-width: 1400px;
-  z-index: 10;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
-  justify-content: space-around;
-  flex-direction: row;
-  font-size: 1.5rem;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 15px 4% 8px 4%;
-  nav{
-    flex-grow: 1;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-  }
-  .hideText{
-    font-size: 0rem !important;
-  }
-  .designSuccessLogo,.designSuccessLogoMobile, .websiteLogo{
-    width:120px;
-    *{
-      fill: white;
-      &.yellow, &.yellow *{
-        fill: $brand-main-color;
-      }
-    }
-  }
-  .designSuccessLogoMobile, .hamburgerIcon{
-    display:none;
-  }
-  .animated{
-    opacity: 0;
-  }
-  #websiteLogo{
-    transition: .3s ease all;
-    &.show{
-      opacity: 1;
-    }
-  }
-  a, .a {
-    color: white;
-    cursor: pointer;
-    flex-grow: 1;
-    justify-self: center;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    opacity: 0.7;
-    font-size: 1.3rem;
-    transition: .3s ease all;
-    &:nth-child(1), &:nth-child(2) {
-      opacity:1;
-    } 
-    &:nth-child(1), &:nth-child(2) {
-      flex-grow: 3;
-    }
-    &:hover, &.active{
-      opacity:1;
-      font-weight: 600;
-    }
-  }
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    transition: .5s ease all;
 }
 
-footer {
-  font-size: 1.4rem;
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-  color: grey;
-  text-align: center;
-  margin-bottom: 20px;
-  a{
-    text-decoration: underline;
-  }
-  p{
-    padding: 0px 8%;
-  }
-  .socialList {
-    width: 150px;
+.headerWrapper {
+    display: flex;
+    transition: .3s ease all;
+    max-width: 1400px;
+    height: 45px;
+    left: 0;
+    right: 0;
+    top: 0;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    svg{
-      width:25px;
-      & * {
-        fill: grey;
-      }
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 4% 8px 11%;
+    nav {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            li {
+                list-style: none;
+                list-style-type: none;
+            }
+        }
     }
-  }
+    .hideText {
+        font-size: 0rem !important;
+    }
+    .designSuccessLogo,
+    .designSuccessLogoMobile,
+    .websiteLogo {
+        width: 120px;
+        * {
+            fill: white;
+            &.yellow,
+            &.yellow * {
+                fill: $brand-main-color;
+            }
+        }
+    }
+    #hamburger {
+        display: none;
+        flex-grow: 1;
+        stroke: #fff;
+        stroke-width: 15;
+        height: 40px;
+        max-width: 35px;
+        cursor: pointer;
+        transition: .3s ease all;
+        #top, #mid, #bot{
+            transition: .3s ease all;
+        }
+        &.active {
+            #top {
+                transform: translateX(35px)rotate(45deg);
+            }
+            #mid {
+                opacity: 0;
+            }
+            #bot {
+                transform: translateX(-141px) translateY(49px)rotate(-45deg);
+            }
+        }
+    }
+    .designSuccessLogoMobile {
+        display: none;
+        height: 35px;
+        max-width: 35px;
+        cursor: pointer;
+    }
+    .animated {
+        opacity: 0;
+    }
+    #websiteLogo {
+        transition: .3s ease all;
+        &.show {
+            opacity: 1;
+        }
+    }
+    a,
+    .a {
+        color: white;
+        cursor: pointer;
+        justify-self: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        opacity: 0.7;
+        font-size: 1.3rem;
+        transition: .3s ease all;
+        &:nth-child(1),
+        &:nth-child(2) {
+            opacity: 1;
+        }
+        &:hover,
+        &.active {
+            opacity: 1;
+        }
+    }
 }
 
 section {
@@ -109,7 +126,7 @@ section {
     max-width: 1150px;
     margin: 0 auto;
     min-height: 100vh;
-    padding: 5%;
+    padding: 3%;
     box-sizing: border-box;
 }
 
@@ -236,9 +253,9 @@ svg {
 
 #contact {
     display: grid;
-    padding: 5% 10px 5% 0;
+    padding: 5% 10px 0 0;
     grid-template-columns: 1fr .8fr .8fr 3fr;
-    grid-template-areas: ". logo logo ." ". h2 h2 ." ". form form ." ". form form locations ";
+    grid-template-areas: ". logo logo ." ". h2 h2 ." ". form form ." ". form form locations " ". form form locations2 " "footer footer footer footer";
     .locationContact {
         grid-area: locations;
         display: grid;
@@ -248,25 +265,24 @@ svg {
         padding: 0 5% 0 10%;
         margin-top: 4%;
         font-size: 1.3rem;
+        &~.locationContact {
+            grid-area: locations2;
+            margin-top: 1%;
+        }
         ul {
             grid-area: 1 /span 2;
             display: flex;
             list-style-type: none;
             color: gray;
             justify-content: space-between;
-            li {
-                flex-grow: 1;
-            }
+            margin: 0;
         }
         p {
             grid-area: 2 /span 1;
-            justify-self: flex-start;
-            margin-left: 30px;
+            margin-left: 0;
             &:nth-child(2) {
                 grid-row-end: span 1;
-                margin-left: 0;
             }
-            flex-grow: 4;
             a {
                 color: white;
                 float: right;
@@ -275,13 +291,16 @@ svg {
     }
     .engageLogo {
         grid-area: logo;
-        svg * {
+        max-width: 450px;
+        * {
             fill: $brand-main-color;
         }
     }
     h2 {
         grid-area: h2;
         color: white;
+        font-family: 'Eurostile LT', sans-serif;
+        font-weight: bold;
         font-size: 7rem;
         margin-top: 10%;
         line-height: .9;
@@ -294,7 +313,14 @@ svg {
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10%;
             grid-template-areas: "name company" "email phone" "challenge challenge";
-            font-family: 'Eurostile LT', sans-serif;
+            font-family: inherit;
+            min-height: 210px;
+            p{
+                font-size: 3rem;
+                padding: 3%;
+                text-align: center;
+                grid-column: 1 / span 2;
+            }
         }
         input,
         textarea {
@@ -340,26 +366,155 @@ svg {
             width: 90px;
             padding: 5px;
             margin-top: 10%;
+            cursor:pointer;
+            transition: .3s ease all;
+            &:hover{
+                border-color: white;
+                color:white;
+            }
         }
     }
     .locationMap {
         grid-column-start: 3;
-        /* autoprefixer: off */
         grid-column-end: col4-end;
         grid-row-start: 1;
         grid-row-end: last-line;
         z-index: -1;
         margin-left: 5%;
-        svg {
-            .st1 {
-                animation: repulse infinite ease-out 1s;
-                transform-origin: 50% 50%;
-                animation-fill-mode: both;
-                animation-direction: alternate;
-            }
-            .st0 {
-                fill: #4f4f4f;
+        .st1 {
+            animation: repulse infinite ease-out 1s;
+            transform-origin: 50% 50%;
+            animation-fill-mode: both;
+            animation-direction: alternate;
+            fill: $brand-main-color;
+        }
+        .st0 {
+            fill: #4f4f4f;
+        }
+    }
+    footer {
+        font-size: 1.4rem;
+        max-width: 1400px;
+        margin: 0 auto;
+        width: 100%;
+        color: grey;
+        text-align: center;
+        margin-bottom: 20px;
+        grid-area: footer;
+        padding-top: 10%;
+        a {
+            text-decoration: underline;
+            color: grey;
+        }
+        p {
+            padding: 0px 8%;
+        }
+        .socialList {
+            width: 150px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            justify-items: center;
+            svg {
+                width: 25px;
+                & * {
+                    fill: grey;
+                }
             }
         }
+    }
+}
+
+.close {
+    position: absolute;
+    top: -5px;
+    right: -45px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: .5s ease all;
+    z-index: 1;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 35px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.next {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    opacity: 0.3;
+    transition: .5s ease all;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+    &:before,
+    &:after {
+        position: absolute;
+        left: 30px;
+        content: ' ';
+        height: 15px;
+        width: 2px;
+        background-color: white;
+    }
+    &:before {
+        transform: rotate(-45deg);
+        top: -10px;
+        left: 30px;
+    }
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+
+.prev {
+    left: 0;
+    z-index: 1;
+    &:before {
+        transform: rotate(45deg);
+        left: 10px;
+    }
+    &:after {
+        transform: rotate(-45deg);
+        left: 10px;
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes repulse {
+    to {
+        transform: scale(1.02);
+        stroke-width: 6;
     }
 }

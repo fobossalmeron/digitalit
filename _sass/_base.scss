@@ -33,9 +33,8 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     font-weight: $base-font-weight;
-    color: $black;
+    color: $white;
     -webkit-text-size-adjust: 100%;
-    background-color: $white;
     position: relative;
     overflow-x: hidden !important;
     width:100%;
@@ -84,7 +83,7 @@ b{
  * Lists
  */
 ul, ol {
-    margin-left: $spacing-unit;
+    margin: 0;
 }
 
 li {
@@ -120,7 +119,7 @@ a {
     }
 
     &:hover {
-        color: $text-color;
+        color: $black;
         text-decoration: underline;
     }
 }
