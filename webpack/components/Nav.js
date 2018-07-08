@@ -28,12 +28,14 @@ class Nav extends Component {
     function touchmove(e) {
       e.preventDefault();
     }
+    this.props.closeModal();
   }
   doHideNav() {
     this.setState({ menuToggled: false });
     document.body.classList.remove("restrictBody");
     document.removeEventListener("touchstart", this.touchstart);
     document.removeEventListener("touchmove", this.touchmove);
+    this.props.closeModal();
   }
 
   componentDidMount() {
@@ -45,6 +47,7 @@ class Nav extends Component {
   }
 
   doScrollToHome(event) {
+    this.props.closeModal();
     if (typeof this.props.scrollToHome !== "undefined") {
       event.preventDefault();
       this.props.scrollToHome();
@@ -55,6 +58,7 @@ class Nav extends Component {
   }
 
   doScrollToAbout(event) {
+    this.props.closeModal();
     if (typeof this.props.scrollToAbout !== "undefined") {
       event.preventDefault();
       this.props.scrollToAbout();
@@ -64,6 +68,7 @@ class Nav extends Component {
     }
   }
   doScrollToWork() {
+    this.props.closeModal();
     if (typeof this.props.scrollToWork !== "undefined") {
       event.preventDefault();
       this.props.scrollToWork();
@@ -73,6 +78,7 @@ class Nav extends Component {
     }
   }
   doScrollToServices() {
+    this.props.closeModal();
     if (typeof this.props.scrollToServices !== "undefined") {
       event.preventDefault();
       this.props.scrollToServices();
@@ -82,6 +88,7 @@ class Nav extends Component {
     }
   }
   doScrollToContact() {
+    this.props.closeModal();
     if (typeof this.props.scrollToContact !== "undefined") {
       event.preventDefault();
       this.props.scrollToContact();
@@ -107,7 +114,7 @@ class Nav extends Component {
     var baseUrl = this.state.relative ? this.props.relativePath : "";
     var navIsActive = this.state.menuToggled ? "navActive" : "";
     var navToggled = this.state.menuToggled ? "toggled" : "";
-    var active = this.state.menuToggled ? "active" : ""; 
+    var active = this.state.menuToggled ? "active" : "";
 
     return (
       <header>
@@ -133,10 +140,7 @@ class Nav extends Component {
             className={active}
             onClick={() => this.toggleMenu()}
           />
-          <nav
-            className={active}
-            onClick={() => this.closeNav()}
-          >
+          <nav className={active} onClick={() => this.closeNav()}>
             <ul>
               <li
                 onClick={() => {

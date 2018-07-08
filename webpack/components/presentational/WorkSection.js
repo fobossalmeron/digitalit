@@ -14,32 +14,31 @@ class WorkSection extends Component {
   constructor() {
     super();
     this.state = {
-      modalIsOpen: false,
       chosenVideo: ""
     };
-    this.openModal = this.openModal.bind(this);
-    this.closeModal = this.closeModal.bind(this);
+    this.doOpenModal = this.doOpenModal.bind(this);
+    this.doCloseModal = this.doCloseModal.bind(this);
   }
-  openModal(video) {
-    this.setState({ modalIsOpen: true, chosenVideo: video });
+  doOpenModal(video) {
+    this.setState({ chosenVideo: video });
+    this.props.openModal();
   }
 
-  closeModal() {
-    this.setState({ modalIsOpen: false });
+  doCloseModal() {
+    this.props.closeModal();
   }
   render() {
     return (
       <section id="work">
         <Modal
-          isOpen={this.state.modalIsOpen}
-          onAfterOpen={this.afterOpenModal}
-          onRequestClose={this.closeModal}
+          isOpen={this.props.modalOpen}
+          onRequestClose={this.doCloseModal}
           contentLabel="Video Modal"
           className="modal"
           overlayClassName="overlay"
-          onClick={this.closeModal}
+          onClick={this.doCloseModal}
         >
-          <a className="close" onClick={this.closeModal} />
+          <a className="close" onClick={this.doCloseModal} />
           <ReactPlayer
             className="video"
             url={`https://vimeo.com/${this.state.chosenVideo}`}
@@ -63,10 +62,10 @@ class WorkSection extends Component {
               &amp; programmed from a-to-z.
             </p>
           </div>
-          <div className="video" onClick={() => this.openModal(228273116)}>
+          <div className="video" onClick={() => this.doOpenModal(228273116)}>
             <PlayButton />
           </div>
-          <div className="video" onClick={() => this.openModal(237994898)}>
+          <div className="video" onClick={() => this.doOpenModal(237994898)}>
             <PlayButton />
           </div>
           <div className="gradient top">
@@ -86,7 +85,7 @@ class WorkSection extends Component {
           <div className="image" />
           <div
             className="video"
-            onClick={() => this.openModal("272768882/fe0d45cb69")}
+            onClick={() => this.doOpenModal("272768882/fe0d45cb69")}
           >
             <PlayButton />
           </div>
@@ -100,7 +99,7 @@ class WorkSection extends Component {
             </p>
           </div>
           <div className="image" />
-          <div className="video" onClick={() => this.openModal(143683357)}>
+          <div className="video" onClick={() => this.doOpenModal(143683357)}>
             <PlayButton />
           </div>
           <div className="gradient right">

@@ -9,7 +9,6 @@ import YouTubeIcon from "svg-react-loader?name=YouTubeIcon!../../../assets/img/s
 import LinkedInIcon from "svg-react-loader?name=LinkedInIcon!../../../assets/img/social/linkedin.svg";
 import TwitterIcon from "svg-react-loader?name=TwitterIcon!../../../assets/img/social/twitter.svg";
 
-
 class ContactSection extends Component {
   constructor(props) {
     super(props);
@@ -18,27 +17,27 @@ class ContactSection extends Component {
 
   render() {
     return (
-      <div>
-        <section id="contact">
-          <DigitalSuccess className="engageLogo" />
-          <h2>challenges welcome</h2>
-          <div className="locationContact">
-            <ul className="chooseList">
-              <li>las vegas</li>
-              <li>mexico city</li>
-              <li>copenhaguen</li>
-              <li>singapore</li>
-            </ul>
-            <p>universal number: +1-702 802 0200</p>
-            <p>
-              <a href="mailto:success@designsuccess.com">
-                success@designsuccess.com
-              </a>
-            </p>
-          </div>
-          <ContactForm />
-          <LocationMap className="locationMap" />
-        </section>
+      <section id="contact">
+        <DigitalSuccess className="engageLogo" />
+        <h2>challenges welcome</h2>
+        <div className="locationContact">
+          <ul className="chooseList">
+            <li>las vegas</li>
+            <li>mexico city</li>
+            <li>copenhaguen</li>
+            <li>singapore</li>
+          </ul>
+        </div>
+        <div className="locationContact">
+          <p>universal number: +1-702 802 0200</p>
+          <p>
+            <a href="mailto:success@designsuccess.com">
+              success@designsuccess.com
+            </a>
+          </p>
+        </div>
+        <ContactForm />
+        <LocationMap className="locationMap" />
         <footer>
           <div className="socialList">
             <FacebookIcon className="socialIcon" />
@@ -53,7 +52,7 @@ class ContactSection extends Component {
             rights reserved. <a>privacy of use</a> | <a>terms & conditions</a>
           </p>
         </footer>
-      </div>
+      </section>
     );
   }
 }

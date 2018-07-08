@@ -44,6 +44,7 @@
                 ul {
                     display: flex;
                     flex-direction: column;
+                    align-items: flex-start;
                 }
             }
             a {
@@ -52,19 +53,27 @@
         }
     }
     .screen1 {
-        min-height: 70vh;
-        padding-top: 5%;
+        min-height: 0;
+        padding: 15% 0 10% 0;
         p {
             padding-left: 4%;
         }
     }
-    .screen2 ul li {
-        padding: 0 2%;
+    .screen2 {
+        min-height: 0;
+        padding-bottom: 12%;
+        ul li {
+            padding: 0 2%;
+        }
     }
     .screen3 {
         padding-top: 2%;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 2fr .1fr .1fr .1fr;
+    }
+    .screen5, .screen6{
+        min-height: 0;
+        padding: 5% 0;
     }
     .screen8 .areasContainer .areasModal {
         display: flex;
@@ -99,6 +108,63 @@
                     text-align: center;
                     padding: 0;
                     margin-bottom: 20px
+                }
+            }
+        }
+    }
+    #contact {
+        padding: 10% 5% 0 5%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo logo" "h2 h2" "locations locations" "form form" "locations2 locations2" "footer footer";
+        .locationContact {
+            padding: 0;
+            font-size: 1.5rem;
+            &~.locationContact {
+                display: flex;
+                flex-direction: column;
+                margin-top: 8%;
+                align-items: center;
+                p {
+                    margin-bottom: 10px;
+                    font-size: 2rem;
+                }
+            }
+        }
+        .locationMap {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+            grid-row-end: last-line;
+            min-width: 600px;
+            justify-self: center;
+        }
+        .engageLogo {
+            padding-top: 15%;
+        }
+        h2 {
+            font-size: 10rem;
+            max-width: 500px;
+        }
+        .form {
+            button {
+                font-size: 2rem;
+                width: 100px;
+                padding: 10px;
+                margin-top: 15%;
+            }
+            input,
+            textarea {
+                font-size: 2rem;
+            }
+        }
+        footer {
+            p {
+                padding: 10px 0 0 0;
+                font-size: 1.6rem;
+            }
+            .socialList {
+                width: 270px;
+                svg {
+                    width: 35px;
                 }
             }
         }
@@ -227,6 +293,9 @@
                 grid-row: 4 / span 1;
                 &~.gradient {
                     grid-column: 2 / span 1;
+                    &:before {
+                        display: none;
+                    }
                 }
             }
         }
@@ -269,6 +338,11 @@
 @include media-query(600px) {
     #home h1 {
         font-size: 4.3rem;
+    }
+    #contact {
+        h2 {
+            font-size: 7.5rem;
+        }
     }
 }
 
