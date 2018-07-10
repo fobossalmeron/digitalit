@@ -36,9 +36,13 @@ header {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             width: 100%;
+            min-width: 300px;
             li {
                 list-style: none;
                 list-style-type: none;
+                a.active{
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -428,7 +432,7 @@ svg {
 .close {
     position: absolute;
     top: -5px;
-    right: -45px;
+    right: 0px;
     width: 60px;
     height: 60px;
     opacity: 0.5;

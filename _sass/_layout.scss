@@ -521,13 +521,10 @@ header {
             }
         }
         .areasModal {
-            position: absolute;
+            position: relative;
             display: flex;
             flex-direction: column;
-            top: 0;
-            left: 0;
-            right: 0;
-            padding: 5% 5% 5% 10%;
+            padding: 10% 5% 5% 10%;
             background-color: black;
             z-index: 1;
             h3 {

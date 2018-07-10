@@ -20,7 +20,7 @@ import Graphic5 from "svg-react-loader?name=Graphic5!../../../assets/img/layout/
 class AboutSection extends Component {
   render() {
     return (
-      <section id="what&amp;how">
+      <section id="what">
         <div className="screen1 screen">
           <p>
             Combining digital agency services and innovation business consulting

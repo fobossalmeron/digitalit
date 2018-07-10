@@ -148,7 +148,7 @@ class Nav extends Component {
                   this.doScrollToAbout(event);
                 }}
               >
-                <a href={baseUrl + "#what&amp;how"}>what &amp; how</a>
+                <a href={baseUrl + "#what&how"}>what & how</a>
               </li>
               <li
                 onClick={() => {
