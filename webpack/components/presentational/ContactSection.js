@@ -10,11 +10,6 @@ import LinkedInIcon from "svg-react-loader?name=LinkedInIcon!../../../assets/img
 import TwitterIcon from "svg-react-loader?name=TwitterIcon!../../../assets/img/social/twitter.svg";
 
 class ContactSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
   render() {
     return (
       <section id="contact">

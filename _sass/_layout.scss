@@ -784,6 +784,13 @@ header {
     position: relative;
     border-radius: 5px;
     margin: 20% 15% 15% 15%;
+    .close {
+        top: -35px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+        opacity: 0.8;
+    }
     &:focus {
         outline: none;
     }

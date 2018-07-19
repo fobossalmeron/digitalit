@@ -3,7 +3,7 @@ title: 'digital:success'
 timezone: UTC
 email: success@designsuccess.com
 description: Digital success
-og_image: "/assets/img/og_image.png"
+og_image: "/assets/img/og_image.jpg"
 baseurl: 
 url: http://digitalsuccess.com
 markdown: kramdown

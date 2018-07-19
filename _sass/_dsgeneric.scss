@@ -257,9 +257,9 @@ svg {
 
 #contact {
     display: grid;
-    padding: 5% 10px 0 0;
-    grid-template-columns: 1fr .8fr .8fr 3fr;
-    grid-template-areas: ". logo logo ." ". h2 h2 ." ". form form ." ". form form locations " ". form form locations2 " "footer footer footer footer";
+    padding: 1% 0 0 3.5%;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-areas: "logo logo ." "h2 h2 ." "form form ." "form form locations " "form form locations2 " "footer footer footer";
     .locationContact {
         grid-area: locations;
         display: grid;
@@ -379,21 +379,22 @@ svg {
         }
     }
     .locationMap {
-        grid-column-start: 3;
-        grid-column-end: col4-end;
+        grid-column-start: 2;
+        grid-column-end: col3-end;
         grid-row-start: 1;
         grid-row-end: last-line;
         z-index: -1;
         margin-left: 5%;
-        .st1 {
+        .landmark {
             animation: repulse infinite ease-out 1s;
             transform-origin: 50% 50%;
             animation-fill-mode: both;
             animation-direction: alternate;
-            fill: $brand-main-color;
+            fill: white;
         }
-        .st0 {
-            fill: #4f4f4f;
+        #gradientDots * {
+            fill: url("#gradientTest");
+            stroke: none;
         }
     }
     footer {
