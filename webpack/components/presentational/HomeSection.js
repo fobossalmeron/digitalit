@@ -1,19 +1,7 @@
 import React, { Component } from "react";
-import ReactPlayer from "react-player";
 import DigitalSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/digitalSuccess.svg";
 
 class HomeSection extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      playing: false
-    };
-  }
-
-  componentDidMount() {
-    this.setState({ playing: true });
-  }
-
   render() {
     return (
       <section id="home">
@@ -28,12 +16,14 @@ class HomeSection extends Component {
         </div>
         <div id="homevideo">
           <div className="video_overlay" />
-          <ReactPlayer
-            url="./assets/video/intro.mp4"
-            playing={this.state.playing}
-            loop={true}
-            muted={true}
-            playsinline={true}
+          <video
+            src="assets/video/intro.mp4"
+            preload="auto"
+            autoPlay
+            muted
+            playing
+            loop
+            playsInline
           />
         </div>
       </section>
