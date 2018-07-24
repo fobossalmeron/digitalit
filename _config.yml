@@ -5,7 +5,7 @@ email: success@designsuccess.com
 description: Digital success
 og_image: "/assets/img/og_image.jpg"
 baseurl: 
-url: http://digitalsuccess.com
+url: http://designsuccess.com/digitalsuccess/
 markdown: kramdown
 plugins:
 - jekyll-feed
