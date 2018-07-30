@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import Modal from "react-modal";
-import PlayButton from "svg-react-loader?name=PlayButton!../../../assets/img/layout/playButton.svg";
-import ClientMoneyAmigo from "svg-react-loader?name=ClientMoneyAmigo!../../../assets/img/clients/clientMoneyAmigo.svg";
-import ClientAmigoHealth from "svg-react-loader?name=ClientAmigoHealth!../../../assets/img/clients/clientAmigoHealth.svg";
-import ClientFindSmile from "svg-react-loader?name=ClientFindSmile!../../../assets/img/clients/clientFindSmile.svg";
-import ClientLudbeck from "svg-react-loader?name=ClientLudbeck!../../../assets/img/clients/clientLudbeck.svg";
-import ClientMyBlueDoctor from "svg-react-loader?name=ClientMyBlueDoctor!../../../assets/img/clients/clientMyBlueDoctor.svg";
-import ClientNovoNordisk from "svg-react-loader?name=ClientNovoNordisk!../../../assets/img/clients/clientNovoNordisk.svg";
+import PlayButton from "./../../../assets/img/layout/playButton.svg";
+import ClientMoneyAmigo from "./../../../assets/img/clients/clientMoneyAmigo.svg";
+import ClientAmigoHealth from "./../../../assets/img/clients/clientAmigoHealth.svg";
+import ClientFindSmile from "./../../../assets/img/clients/clientFindSmile.svg";
+import ClientLudbeck from "./../../../assets/img/clients/clientLudbeck.svg";
+import ClientMyBlueDoctor from "./../../../assets/img/clients/clientMyBlueDoctor.svg";
+import ClientNovoNordisk from "./../../../assets/img/clients/clientNovoNordisk.svg";
 
 Modal.setAppElement("#app");
 class WorkSection extends Component {

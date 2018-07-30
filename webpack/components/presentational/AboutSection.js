@@ -1,21 +1,9 @@
 import React, { Component } from "react";
-import NikeIcon from "svg-react-loader?name=NikeIcon!../../../assets/img/clients/clientNike.svg";
-import CocaColaIcon from "svg-react-loader?name=CocaColaIcon!../../../assets/img/clients/clientCocaCola.svg";
-import ChanelIcon from "svg-react-loader?name=ChanelIcon!../../../assets/img/clients/clientChanel.svg";
-import MoneyGramIcon from "svg-react-loader?name=MoneyGramIcon!../../../assets/img/clients/clientMoneyGram.svg";
-import CapitalOneIcon from "svg-react-loader?name=CapitalOneIcon!../../../assets/img/clients/clientCapitalOne.svg";
-import BaseFIcon from "svg-react-loader?name=BaseFIcon!../../../assets/img/clients/clientBaseF.svg";
-import NovartisIcon from "svg-react-loader?name=NovartisIcon!../../../assets/img/clients/clientNovartis.svg";
-import DiageoIcon from "svg-react-loader?name=DiageoIcon!../../../assets/img/clients/clientDiageo.svg";
-import KraftIcon from "svg-react-loader?name=KraftIcon!../../../assets/img/clients/clientKraft.svg";
-import PepsicoIcon from "svg-react-loader?name=PepsicoIcon!../../../assets/img/clients/clientPepsico.svg";
-import BMWIcon from "svg-react-loader?name=BMWIcon!../../../assets/img/clients/clientBMW.svg";
-import BossIcon from "svg-react-loader?name=BossIcon!../../../assets/img/clients/clientBoss.svg";
-import Graphic1 from "svg-react-loader?name=Graphic1!../../../assets/img/layout/graphic1.svg";
-import Graphic2 from "svg-react-loader?name=Graphic2!../../../assets/img/layout/graphic2.svg";
-import Graphic3 from "svg-react-loader?name=Graphic3!../../../assets/img/layout/graphic3.svg";
-import Graphic4 from "svg-react-loader?name=Graphic4!../../../assets/img/layout/graphic4.svg";
-import Graphic5 from "svg-react-loader?name=Graphic5!../../../assets/img/layout/graphic5.svg";
+import Graphic1 from "./../../../assets/img/layout/graphic1.svg";
+import Graphic2 from "./../../../assets/img/layout/graphic2.svg";
+import Graphic3 from "./../../../assets/img/layout/graphic3.svg";
+import Graphic4 from "./../../../assets/img/layout/graphic4.svg";
+import Graphic5 from "./../../../assets/img/layout/graphic5.svg";
 
 class AboutSection extends Component {
   render() {

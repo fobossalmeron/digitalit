@@ -19,7 +19,7 @@ header {
 .headerWrapper {
     display: flex;
     transition: .3s ease all;
-    max-width: 1400px;
+    max-width: $max-body-width;
     height: 45px;
     left: 0;
     right: 0;
@@ -32,16 +32,20 @@ header {
     box-sizing: border-box;
     padding: 15px 4% 8px 11%;
     nav {
+        grid-column: 5 /span 2;
+        grid-row: 1 / span 1;
+        justify-content: center;
+        display: flex;
         ul {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            width: 100%;
-            min-width: 300px;
+            display: flex;
             li {
                 list-style: none;
                 list-style-type: none;
-                a.active{
-                    font-weight: 600;
+                a {
+                    font-size: 1.6rem;
+                    &.active {
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -52,12 +56,13 @@ header {
     .designSuccessLogo,
     .designSuccessLogoMobile,
     .websiteLogo {
-        width: 120px;
+        width: 150px;
+        height: 25px;
         * {
             fill: white;
             &.yellow,
             &.yellow * {
-                fill: $brand-main-color;
+                fill: $white;
             }
         }
     }
@@ -70,18 +75,20 @@ header {
         max-width: 35px;
         cursor: pointer;
         transition: .3s ease all;
-        #top, #mid, #bot{
+        path {
             transition: .3s ease all;
         }
         &.active {
-            #top {
-                transform: translateX(35px)rotate(45deg);
-            }
-            #mid {
-                opacity: 0;
-            }
-            #bot {
-                transform: translateX(-141px) translateY(49px)rotate(-45deg);
+            path {
+                &:nth-child(1) {
+                    transform: translateX(35px)rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    transform: translateX(-141px) translateY(49px)rotate(-45deg);
+                }
             }
         }
     }
@@ -109,10 +116,19 @@ header {
         display: flex;
         justify-content: center;
         opacity: 0.7;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        padding-right: 15px;
         transition: .3s ease all;
-        &:nth-child(1),
+        &:nth-child(1) {
+            opacity: 1;
+            grid-column: 2 /span 1;
+            grid-row: 1 / span 1;
+            justify-self: flex-start;
+        }
         &:nth-child(2) {
+            grid-column: 3 / span 2;
+            grid-row: 1 / span 1;
+            justify-self: center;
             opacity: 1;
         }
         &:hover,
@@ -127,9 +143,8 @@ section {
     align-content: center;
     position: relative;
     width: 100%;
-    max-width: 1150px;
+    max-width: $max-body-width;
     margin: 0 auto;
-    min-height: 100vh;
     padding: 3%;
     box-sizing: border-box;
 }
@@ -257,18 +272,18 @@ svg {
 
 #contact {
     display: grid;
-    padding: 1% 0 0 3.5%;
-    grid-template-columns: 1fr 1fr 3fr;
-    grid-template-areas: "logo logo ." "h2 h2 ." "form form ." "form form locations " "form form locations2 " "footer footer footer";
+    padding: 1% 0 0 0;
+    grid-template-columns: 1fr 1fr 1fr 3fr;
+    grid-template-areas: ". logo logo ." ". h2 h2 ." ". form form ." ". form form locations " ". form form locations2 " "footer footer footer footer";
     .locationContact {
         grid-area: locations;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-content: space-between;
-        padding: 0 5% 0 10%;
+        padding: 0 12.6% 0 6%;
         margin-top: 4%;
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         &~.locationContact {
             grid-area: locations2;
             margin-top: 1%;
@@ -297,34 +312,57 @@ svg {
         grid-area: logo;
         max-width: 450px;
         * {
-            fill: $brand-main-color;
+            fill: white;
+            opacity: 100;
+            stroke: none;
+            fill-rule: unset;
+            clip-rule: unset;
         }
     }
     h2 {
         grid-area: h2;
+        font-size: 9rem;
         color: white;
         font-family: 'Eurostile LT', sans-serif;
         font-weight: bold;
-        font-size: 7rem;
         margin-top: 10%;
         line-height: .9;
+        padding-left: 0;
+        svg{
+            max-width: 460px;
+        }
     }
     .form {
         grid-area: form;
         margin-top: 10%;
-        form div {
+        min-height: 260px;
+        position: relative;
+        form .formGrid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 10%;
             grid-template-areas: "name company" "email phone" "challenge challenge";
             font-family: inherit;
             min-height: 210px;
-            p{
-                font-size: 3rem;
-                padding: 3%;
-                text-align: center;
-                grid-column: 1 / span 2;
+            span {
+                color: orange;
+                font-size: 1.3rem;
             }
+            .hidden {
+                display: none;
+            }
+        }
+        p {
+            font-size: 3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            background-color: black;
+            margin-bottom: 0;
         }
         input,
         textarea {
@@ -336,7 +374,9 @@ svg {
             color: grey;
             resize: none;
             line-height: .5;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
+            max-width: 100%;
+            width: 100%;
             &:focus {
                 outline: none;
             }
@@ -355,8 +395,10 @@ svg {
                 grid-area: phone;
             }
         }
-        textarea {
+        .textArea {
             grid-area: challenge;
+        }
+        textarea {
             margin-top: 10%;
             height: 25px;
             line-height: 1.6;
@@ -366,21 +408,23 @@ svg {
             background-color: transparent;
             border: 1px solid #3d3d3d;
             color: grey;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             width: 90px;
             padding: 5px;
             margin-top: 10%;
-            cursor:pointer;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
             transition: .3s ease all;
-            &:hover{
+            &:hover {
                 border-color: white;
-                color:white;
+                color: white;
             }
         }
     }
     .locationMap {
-        grid-column-start: 2;
-        grid-column-end: col3-end;
+        grid-column-start: 3;
+        grid-column-end: col4-end;
         grid-row-start: 1;
         grid-row-end: last-line;
         z-index: -1;
@@ -399,14 +443,14 @@ svg {
     }
     footer {
         font-size: 1.4rem;
-        max-width: 1400px;
+        max-width: $max-body-width;
         margin: 0 auto;
         width: 100%;
         color: grey;
         text-align: center;
         margin-bottom: 20px;
         grid-area: footer;
-        padding-top: 10%;
+        padding-top: 5%;
         a {
             text-decoration: underline;
             color: grey;
@@ -416,7 +460,7 @@ svg {
         }
         .socialList {
             width: 150px;
-            margin: 0 auto;
+            margin: 0 auto 10px auto;
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             justify-items: center;
@@ -521,5 +565,46 @@ svg {
     to {
         transform: scale(1.02);
         stroke-width: 6;
+    }
+}
+
+
+.noBackground {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    h2 {
+        font-weight: 100;
+        text-decoration: none;
+        font-size: 1.5rem;
+        &:before {
+            display: none;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    svg {
+        width: 50px;
+        height: 50px;
+        animation: tick-tock 800ms steps(8, end) infinite;
+        transform-origin: 50% 50%;
+        & * {
+            fill: $brand-main-color !important;
+        }
+    }
+}
+
+@keyframes tick-tock {
+    to {
+        transform: rotate(360deg);
     }
 }

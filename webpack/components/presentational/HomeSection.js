@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import DigitalSuccess from "svg-react-loader?name=DesignSuccess!../../../assets/img/layout/digitalSuccess.svg";
+import DigitalSuccess from "./../../../assets/img/layout/digitalSuccess.svg";
 
 class HomeSection extends Component {
   render() {
@@ -21,7 +21,6 @@ class HomeSection extends Component {
             preload="auto"
             autoPlay
             muted
-            playing
             loop
             playsInline
           />

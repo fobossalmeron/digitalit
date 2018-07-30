@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Graphic2 from "svg-react-loader?name=Graphic2!../../assets/img/layout/graphic2.svg";
+import Graphic2 from "./../../assets/img/layout/graphic2.svg";
 
 class AreasModal extends Component {
   constructor(props) {

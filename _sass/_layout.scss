@@ -4,6 +4,7 @@
 
 #home {
     max-width: 2000px;
+    min-height: 100vh;
     h1 {
         font-size: 6.4rem;
         text-align: center;
@@ -27,12 +28,28 @@
 
 #serviceareas {
     padding-bottom: 0;
+    max-width: 1150px;
+}
+#what {
+    max-width: 1150px;
+    padding-top: 8%;
 }
 
 header {
     background-color: transparent;
+    .designSuccessLogo {
+        transition: .3s ease all;
+    }
+    .headerWrapper {
+        padding: 15px 0 8px 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
     &.headerScroll {
         background-color: black;
+        .designSuccessLogo {
+            opacity: 1;
+        }
     }
 }
 
@@ -142,7 +159,6 @@ header {
 }
 
 .screen {
-    min-height: 90vh;
     display: grid;
     align-content: center;
     position: relative;
@@ -468,17 +484,22 @@ header {
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 3rem;
             list-style: none;
+            -webkit-backface-visibility: hidden;
             li {
                 position: relative;
+                -webkit-backface-visibility: hidden;
+                transform:translateZ(0.0000001px);
                 .areasIcon {
                     fill: white;
                     max-width: 100px;
                     left: 50%;
                     position: relative;
-                    transform: translateX(-50%);
+                    transform: translateX(-50%) translateZ(0.0000001px);
                     margin-bottom: 5%;
                     margin-top: 30%;
                     transition: .3s ease all;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
                 }
                 .backIcon {
                     position: absolute;
@@ -487,6 +508,9 @@ header {
                     width: 100%;
                     z-index: -1;
                     transition: .3s ease all;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    transform:translateZ(0.0000001px);
                 }
                 h3 {
                     text-align: center;
@@ -495,10 +519,16 @@ header {
                     font-weight: 400;
                     transition: .3s ease all;
                     margin-bottom: 15%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    transform:translateZ(0.0000001px);
                 }
                 p {
                     opacity: 0;
                     font-size: 0rem;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    transform:translateZ(0.0000001px);
                 }
                 &:hover {
                     .areasIcon {
@@ -555,7 +585,7 @@ header {
         align-items: center;
         grid-template-columns: repeat(6, 1fr);
         justify-self: center;
-        max-width: 1150px;
+        max-width: $max-body-width;
         margin-bottom: 5%;
         svg {
             fill: white;

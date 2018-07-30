@@ -6,8 +6,6 @@ import AboutSection from "./presentational/AboutSection";
 import ServicesSection from "./presentational/ServicesSection";
 import ContactSection from "./presentational/ContactSection";
 import scrollToComponent from "react-scroll-to-component";
-import InstagramIcon from "svg-react-loader?name=InstagramIcon!../../assets/img/social/instagram.svg";
-import UnderConstructionIcon from "svg-react-loader?name=UnderConstruction!../../assets/img/underconstruction.svg";
 
 class App extends Component {
   constructor(props) {
@@ -63,36 +61,7 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-        <div id="loadingvideo">
-          <UnderConstructionIcon />
-        </div>
-        <div className="aboveVideo">
-          <img src="assets/img/layout/logo.svg" />
-          <img src="assets/img/layout/type.svg" />
-          <div className="secondLanding">
-            <h2 className="blue">we're</h2>
-            <h2 className="yellow">redesigning</h2>
-            <h2 className="pink">ourselves</h2>
-          </div>
-          <div className="follow">
-            <p>
-              follow us on
-              <a
-                href={"https://www.instagram.com/more.than.spaces/"}
-                target="_blank"
-              >
-                <InstagramIcon />
-              </a>
-            </p>
-            <p>
-              <a href="http://instagram.com/more.than.spaces/">
-                @<span className="blue">more</span>.<span className="yellow">
-                  than
-                </span>.<span className="pink">spaces</span>
-              </a>
-            </p>
-          </div>
-        </div>
+        site under maintenance
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     );

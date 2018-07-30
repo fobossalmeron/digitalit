@@ -15,6 +15,8 @@
             align-items: flex-start;
             #hamburger {
                 display: flex;
+                grid-column: 6 / span 1;
+                justify-self: flex-end;
             }
             .websiteLogo {
                 width: 150px;
@@ -38,6 +40,8 @@
                 background-color: black;
                 transform: translateX(-100%);
                 transition: 0.3s ease all;
+                min-width: 100vw;
+                min-height: 100vh;
                 &.active {
                     transform: translateX(0);
                 }
@@ -45,10 +49,17 @@
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
+                    li a {
+                        font-size: 5rem;
+                    }
                 }
             }
             a {
                 font-size: 5rem;
+                &:nth-child(1) {
+                    grid-column: 1 / span 1;
+                    justify-self: flex-start;
+                }
             }
         }
     }
@@ -71,7 +82,8 @@
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 2fr .1fr .1fr .1fr;
     }
-    .screen5, .screen6{
+    .screen5,
+    .screen6 {
         min-height: 0;
         padding: 5% 0;
     }
