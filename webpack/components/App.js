@@ -6,6 +6,7 @@ import AboutSection from "./presentational/AboutSection";
 import ServicesSection from "./presentational/ServicesSection";
 import ContactSection from "./presentational/ContactSection";
 import scrollToComponent from "react-scroll-to-component";
+import DigitalSuccess from "./../../assets/img/layout/digitalSuccess.svg";
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class App extends Component {
     this.state = {
       menuOn: false,
       modalOpen: false,
-      maintenance: false
+      maintenance: true
     };
     this.quitMaintenance = this.quitMaintenance.bind(this);
     this.initScrollMagic = this.initScrollMagic.bind(this);
@@ -61,7 +62,8 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-        site under maintenance
+        <DigitalSuccess/>
+        <h2>website under construction</h2>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
     );
