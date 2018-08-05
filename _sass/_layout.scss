@@ -589,6 +589,7 @@ header {
         margin-bottom: 5%;
         svg {
             fill: white;
+            max-width: 266px;
             &:nth-of-type(5) {
                 padding: 0 10% 0 40%;
             }
