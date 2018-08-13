@@ -2,9 +2,22 @@ import React, { Component } from "react";
 import DigitalSuccess from "./../../../assets/img/layout/digitalSuccess.svg";
 
 class HomeSection extends Component {
-  componentDidMount(){
-    this.refs.video.setAttribute('muted', true);
+  constructor() {
+    super();
+    this.playVideo = this.playVideo.bind(this);
+  }
+  componentDidMount() {
+    this.refs.video.setAttribute("muted", true);
+    this.refs.video.pause();
+    this.playVideo();
+  }
+
+  playVideo() {
     this.refs.video.play();
+    var myself = this
+    setTimeout(function() {
+      myself.refs.video.play();
+    }, 500);
   }
   render() {
     return (

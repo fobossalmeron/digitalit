@@ -84,7 +84,7 @@ class App extends Component {
             scrollToComponent(this.Services, { offset: -45, align: "top" })
           }
           scrollToWork={() =>
-            scrollToComponent(this.Work, { offset: -45, align: "top" })
+            scrollToComponent(this.Work, { offset: -65, align: "top" })
           }
           scrollToContact={() =>
             scrollToComponent(this.Contact, { offset: -45, align: "top" })

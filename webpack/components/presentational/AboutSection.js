@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Graphic1 from "./../../../assets/img/layout/graphic1.svg";
+import Graphic1Mobile from "./../../../assets/img/layout/graphic1mobile.svg";
 import Graphic2 from "./../../../assets/img/layout/graphic2.svg";
 import Graphic3 from "./../../../assets/img/layout/graphic3.svg";
 import Graphic4 from "./../../../assets/img/layout/graphic4.svg";
@@ -15,7 +16,8 @@ class AboutSection extends Component {
             we transform business process and end-user engagement successfully.
             From prototyping to enterprise solutions:
           </p>
-          <Graphic1 />
+          <Graphic1 className="desktop"/>
+          <Graphic1Mobile className="mobile"/>
         </div>
         <div className="screen2 screen">
           <ul>

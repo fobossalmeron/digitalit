@@ -66,6 +66,7 @@
     .screen1 {
         min-height: 0;
         padding: 15% 0 10% 0;
+
         p {
             padding-left: 4%;
         }
@@ -188,6 +189,16 @@
     #home h1 {
         font-size: 6.9rem;
     }
+    .screen1{
+        svg{
+            &.mobile{
+                display: flex;
+            }
+            &.desktop{
+                display: none;
+            }
+        }
+    }
 }
 
 @include media-query(800px) {
@@ -256,6 +267,7 @@
     #work .clients {
         grid-gap: 3rem 1rem;
         margin-bottom: 10%;
+        padding: 0 2%;
         grid-template-columns: repeat(3, 1fr);
     }
     .workScreen {
