@@ -14,7 +14,7 @@ class HomeSection extends Component {
 
   playVideo() {
     this.refs.video.play();
-    var myself = this
+    var myself = this;
     setTimeout(function() {
       myself.refs.video.play();
     }, 500);
@@ -26,9 +26,9 @@ class HomeSection extends Component {
           <DigitalSuccess className="mainLogo" />
           <h1>reimagine, (re)invent, realize</h1>
           <h2>
-            We are award-winning digital pioneers that takes validated
-            innovations, strategies and products and make them come digitally
-            alive – fast!
+            We are award winning, digital pioneers who take validated
+            innovations, strategies & products and make them come alive -
+            digitally and fast!
           </h2>
         </div>
         <div id="homevideo">

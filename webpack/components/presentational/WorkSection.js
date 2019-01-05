@@ -58,8 +58,8 @@ class WorkSection extends Component {
           <div className="gradient left bottom">
             <ClientMoneyAmigo />
             <p>
-              Award-winning money and life management application. Innovated
-              &amp; programmed from a-to-z.
+              An award-winning money and life management application. Innovated
+              & programmed from A-to-Z.
             </p>
           </div>
           <div className="video" onClick={() => this.doOpenModal(228273116)}>
@@ -71,15 +71,15 @@ class WorkSection extends Component {
           <div className="gradient top">
             <ClientFindSmile />
             <p>
-              Revolutionary way to find, book and save when looking for a
+              A revolutionary new way to find, book and save when needing a
               dentist. Concept, UI and backbone innovation.
             </p>
           </div>
           <div className="gradient right bottom">
             <ClientAmigoHealth />
             <p>
-              An innovation from a-to-z giving everyone access to see a doctor
-              online in a revolutionary simple and extremely inexpensive way.
+              An A-to Z innovation giving anyone online access to see a doctor
+              in a revolutionary and extremely simple, inexpensive way.
             </p>
           </div>
           <div className="image" />
@@ -91,11 +91,12 @@ class WorkSection extends Component {
           </div>
         </div>
         <div className="workScreen workFollow screen">
-        <div className="image" />
+          <div className="image" />
           <div className="gradient left bottom">
             <ClientLudbeck />
             <p>
-            Development of a concierge application and service for physicians and psychiatrists for world’s largest manufacturer of anti-depressants.  
+              A concierge application and service for physicians & psychiatrists
+              of the world’s largest manufacturer of anti-depressants.
             </p>
           </div>
           <div className="image" />
@@ -105,13 +106,18 @@ class WorkSection extends Component {
           <div className="gradient right">
             <ClientMyBlueDoctor />
             <p>
-            Creation of first cross functional and IT agnostic booking system. Easy for patients and easy for doctors’ offices.             </p>
+              Creation of first cross functional and IT agnostic booking system.
+              Easy for patients and doctor’s officer alike.
+            </p>
           </div>
           <div className="image" />
           <div className="gradient top">
             <ClientNovoNordisk />
             <p>
-            Development of first cross-target application for Novo Nordisk; connecting patients and endocrinologists / doctors in a natural and intuitive way. Increasing compliance and interaction.            </p>
+              Development of Novo Nordisk’s first cross-target application;
+              connecting patients, endocrinologists and doctors in a natural,
+              intuitive way. Increasing interaction and patient compliance.
+            </p>
           </div>
         </div>
       </section>
