@@ -1,72 +1,48 @@
 import React, { Component } from "react";
+import ReactPlayer from "react-player";
 import Graphic1 from "./../../../assets/img/layout/graphic1.svg";
-import Graphic1Mobile from "./../../../assets/img/layout/graphic1mobile.svg";
-import Graphic2 from "./../../../assets/img/layout/graphic2.svg";
-import Graphic3 from "./../../../assets/img/layout/graphic3.svg";
-import Graphic4 from "./../../../assets/img/layout/graphic4.svg";
-import Graphic5 from "./../../../assets/img/layout/graphic5.svg";
+import Graphic1Mobile from "./../../../assets/img/layout/graphic1.svg";
 
 class AboutSection extends Component {
   render() {
     return (
-      <section id="what">
+      <section id="why">
         <div className="screen1 screen">
+          <h2>why</h2>
           <p>
-            We combine digital agency services and innovation business
-            consulting to transform your business process and end-user
-            engagement successfully, from prototyping to enterprise solutions:
+            Today, we live in the age of acceleration where challenges and
+            competition come from new and unexpected places.
+            <br />
+            <br />
+            <b>FACT:</b> 70% of companies that were on the Fortune 1000 list
+            just 10 years ago have fallen off the list. Adapting isn’t enough
+            and <b>tomorrow is too late.</b>
+            <br />
+            <br />
+            Your business and brand need <b>intelligent transformation now</b>.
+          </p>
+          <h2>what</h2>
+          <p>
+            <b>transform:now</b> is the next-generation experience, design and
+            digital transformation consultancy. By applying our patented &
+            ISO:9001 certified proven process (trusted by the world’s biggest
+            brands and Fortune500 companies), we design true digital
+            transformations for businesses and consumers by delivering insights,
+            ideation, validation and tangible transformational solutions in the
+            following areas:
           </p>
           <Graphic1 className="desktop" />
-          <Graphic1Mobile className="mobile" />
-        </div>
-        <div className="screen2 screen">
-          <ul>
-            <li>
-              <Graphic2 />
-              <h3>reimagine</h3>
-              <p>
-                Utilizing design:success’ proprietary innovation process, we
-                identify innovative digital solutions.
-                <br />
-                We rapidly create digital mock-ups, UI/UX’s and flows and test
-                live with real consumers.
-              </p>
-            </li>
-            <li>
-              <Graphic3 />
-              <h3>(re)invent</h3>
-              <p>
-                Based on deep insights and data, we (re)invent the IT & digital
-                experience from UI/UX front end to integration back-end – with
-                in-depth architecture and flows.
-              </p>
-            </li>
-            <li>
-              <Graphic4 />
-              <h3>realize</h3>
-              <p>
-                We design and build the REAL experience and solution, either as
-                functional prototyping or final end-to-end enterprise product.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <div className="screen3 screen">
-          <div className="box">
-            <h2>the results are simple</h2>
-            <Graphic5 />
-          </div>
-          <h3>rapid</h3>
-          <p>we’re faster than any other innovation and IT process</p>
-          <h3>repositioning</h3>
-          <p>
-            your brand, company and experience towards customers and investors
+          {/*<Graphic1Mobile className="mobile" />*/}
+          <p className="colophon">
+            <b>
+              the outcome: tangible and measurable impact for your organization
+              that leads to growth and thrive.
+            </b>
           </p>
-          <h3>(r)evolutionize</h3>
-          <p>
-            changing your brand, category and experience forever – increasing
-            ROI, faster
-          </p>
+          <ReactPlayer
+            url="https://vimeo.com/343751758"
+            className="fullVideo"
+          />
         </div>
       </section>
     );

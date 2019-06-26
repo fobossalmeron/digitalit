@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 500 500" version="1.1" viewBox="0 0 500 500" xml:space="preserve">
+    <linearGradient id="SVG_E" x1="645.0559" x2="250.0638" y1="-4393.9429" y2="-5464.9282" gradientTransform="matrix(-0.3128 -0.9498 0.9498 -0.3128 5001.2612 -896.4091)" gradientUnits="userSpaceOnUse">
+        <stop offset="0" style="stop-color:#0000FF"/>
+        <stop offset="1" style="stop-color:#00FFFF"/>
+    </linearGradient>
+    <polygon points="204.8,5 48,494 462.3,190.6 " style="fill:url(#SVG_E)"/>
+</svg>

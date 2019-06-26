@@ -5,6 +5,7 @@ class ServicesSection extends Component {
   render() {
     return (
       <section id="serviceareas">
+        {/*
         <div className="screen4 screen">
           <h2>service areas</h2>
           <p className="main">
@@ -194,7 +195,7 @@ SAP or back-end systems.
             D:S understands the complexities of integrating with back-end systems. We have the in-house skills, experience to employ full-scale integration and staff
 necessary to designing and build robust APIs with mobile ready back-ends.
           </p>
-        </div>
+        </div>*/}
         <div className="screen8 screen">
           <h2>service areas</h2>
           <Areas />

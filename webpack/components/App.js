@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
 import HomeSection from "./presentational/HomeSection";
-import WorkSection from "./presentational/WorkSection";
 import AboutSection from "./presentational/AboutSection";
+import ProcessSection from "./presentational/ProcessSection";
+import WorkSection from "./presentational/WorkSection";
 import ServicesSection from "./presentational/ServicesSection";
+import CertificationsSection from "./presentational/CertificationsSection.js";
 import ContactSection from "./presentational/ContactSection";
 import scrollToComponent from "react-scroll-to-component";
 import DigitalSuccess from "./../../assets/img/layout/digitalSuccess.svg";
@@ -62,7 +64,7 @@ class App extends Component {
   render() {
     var maintenanceScreen = (
       <div className="loading">
-        <DigitalSuccess/>
+        <DigitalSuccess />
         <h2>website under construction</h2>
         <button onClick={this.quitMaintenance}>quit</button>
       </div>
@@ -80,8 +82,17 @@ class App extends Component {
           scrollToAbout={() =>
             scrollToComponent(this.About, { offset: -45, align: "top" })
           }
+          scrollToProcess={() =>
+            scrollToComponent(this.Process, { offset: -45, align: "top" })
+          }
           scrollToServices={() =>
             scrollToComponent(this.Services, { offset: -45, align: "top" })
+          }
+          scrollToCertifications={() =>
+            scrollToComponent(this.Certifications, {
+              offset: -45,
+              align: "top"
+            })
           }
           scrollToWork={() =>
             scrollToComponent(this.Work, { offset: -65, align: "top" })
@@ -100,6 +111,11 @@ class App extends Component {
             this.About = section;
           }}
         />
+        <ProcessSection
+          ref={section => {
+            this.Process = section;
+          }}
+        />
         <WorkSection
           ref={section => {
             this.Work = section;
@@ -111,6 +127,11 @@ class App extends Component {
         <ServicesSection
           ref={section => {
             this.Services = section;
+          }}
+        />
+        <CertificationsSection
+          ref={section => {
+            this.Certifications = section;
           }}
         />
         <ContactSection

@@ -66,6 +66,16 @@ class Nav extends Component {
       }
     }
   }
+  doScrollToProcess() {
+    this.props.closeModal();
+    if (typeof this.props.scrollToProcess !== "undefined") {
+      event.preventDefault();
+      this.props.scrollToProcess();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#process");
+      }
+    }
+  }
   doScrollToWork() {
     this.props.closeModal();
     if (typeof this.props.scrollToWork !== "undefined") {
@@ -86,6 +96,18 @@ class Nav extends Component {
       }
     }
   }
+
+  doScrollToCertifications() {
+    this.props.closeModal();
+    if (typeof this.props.scrollToCertifications !== "undefined") {
+      event.preventDefault();
+      this.props.scrollToCertifications();
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, "#certifications");
+      }
+    }
+  }
+
   doScrollToContact() {
     this.props.closeModal();
     if (typeof this.props.scrollToContact !== "undefined") {
@@ -139,7 +161,7 @@ class Nav extends Component {
             className={active}
             onClick={() => this.toggleMenu()}
           />
-          <nav className={active} onClick={() => this.closeNav()}>
+          <nav className={active}>
             <ul>
               <li
                 onClick={() => {
@@ -147,7 +169,15 @@ class Nav extends Component {
                   this.doScrollToAbout(event);
                 }}
               >
-                <a href={baseUrl + "#what&how"}>what & how</a>
+                <a href={baseUrl + "#why"}>why & what</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToProcess(event);
+                }}
+              >
+                <a href={baseUrl + "#process"}>process</a>
               </li>
               <li
                 onClick={() => {
@@ -164,6 +194,14 @@ class Nav extends Component {
                 }}
               >
                 <a href={baseUrl + "#serviceareas"}>service areas</a>
+              </li>
+              <li
+                onClick={() => {
+                  this.doHideNav();
+                  this.doScrollToCertifications();
+                }}
+              >
+                <a href={baseUrl + "#certifications"}>certifications</a>
               </li>
               <li
                 onClick={() => {

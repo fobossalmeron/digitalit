@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import DigitalSuccess from "./../../../assets/img/layout/digitalSuccess.svg";
+import ByDesignSuccess from "./../../../assets/img/layout/byDesignSuccess.svg";
 
 class HomeSection extends Component {
   constructor() {
@@ -24,11 +25,10 @@ class HomeSection extends Component {
       <section id="home">
         <div className="overVideo">
           <DigitalSuccess className="mainLogo" />
-          <h1>reimagine, (re)invent, realize</h1>
+          <ByDesignSuccess className="byDesign"/>
+          <h1>transform:now</h1>
           <h2>
-            We are award winning, digital pioneers who take validated
-            innovations, strategies & products and make them come alive -
-            digitally and fast!
+          transforming brands and companies into digital market leaders
           </h2>
         </div>
         <div id="homevideo">
