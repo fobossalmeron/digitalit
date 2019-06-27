@@ -47,7 +47,6 @@
 }
 
 #serviceareas {
-    padding-bottom: 0;
     max-width: 1150px;
 }
 
@@ -602,7 +601,7 @@ header {
 
 .screen8 {
     align-content: flex-start;
-    min-height: 80vh;
+    z-index:1;
 
     h2 {
         font-size: 5rem;
@@ -614,7 +613,7 @@ header {
 
     .areasContainer {
         position: relative;
-        min-height: 60vh;
+        z-index:-1;
 
         h3 {
             font-weight: bold;
@@ -626,23 +625,23 @@ header {
             grid-gap: 3rem;
             list-style: none;
             -webkit-backface-visibility: hidden;
+            margin-bottom: 7%;
 
             li {
                 position: relative;
                 -webkit-backface-visibility: hidden;
                 transform: translateZ(0.0000001px);
+                cursor: default;
 
                 .areasIcon {
                     fill: white;
                     max-width: 100px;
                     left: 50%;
-                    position: relative;
+                    position: absolute;
                     transform: translateX(-50%) translateZ(0.0000001px);
                     margin-bottom: 5%;
                     margin-top: 30%;
                     transition: .3s ease all;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
                 }
 
                 .backIcon {
@@ -652,8 +651,6 @@ header {
                     width: 100%;
                     z-index: -1;
                     transition: .3s ease all;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
                     transform: translateZ(0.0000001px);
                 }
 
@@ -662,19 +659,32 @@ header {
                     font-size: 2.5rem;
                     padding: 0 5%;
                     font-weight: 400;
-                    transition: .3s ease all;
                     margin-bottom: 15%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
                     transform: translateZ(0.0000001px);
+                }
+
+                .hovered {
+                    transition: .3s ease all;
+                    opacity: 0;
+                    text-align: left;
+                    padding: 0;
+                    margin-bottom: 2%;
+                }
+
+                .unhovered {
+                    position: absolute;
+                    top: calc(35% + 100px);
+                    width: 100%;
+                    opacity: 1;
+                    transition: .1s ease all;
+
                 }
 
                 p {
                     opacity: 0;
-                    font-size: 0rem;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    transform: translateZ(0.0000001px);
+                    font-size: 2rem;
+                    transition: .3s ease all;
+                    transform: translateZ(0.0000001px) translateY(-18px);
                 }
 
                 &:hover {
@@ -687,15 +697,21 @@ header {
                         opacity: 0;
                     }
 
-                    h3 {
-                        text-align: left;
-                        padding: 0;
-                        margin-bottom: 2%;
+                    .unhovered {
+                        opacity: 0;
+                        transition: .1s ease all;
+
+                    }
+
+                    .hovered {
+                        opacity: 1;
+                        transition: .4s ease all;
+
                     }
 
                     p {
                         opacity: 1;
-                        font-size: 2rem;
+                        transform: translateZ(0.0000001px) translateX(0px);
                     }
                 }
             }
@@ -806,7 +822,7 @@ header {
     }
 
     .right {
-        &:before{
+        &:before {
             position: absolute;
             display: inline-block;
             border-top: 20px solid transparent;
@@ -860,7 +876,7 @@ header {
         background: linear-gradient(to right, #0000FF, #54bffa);
         grid-column: 3 / span 1;
         grid-row: 1 / span 1;
-        font-size:1rem;
+        font-size: 1rem;
 
         &~.gradient {
             grid-column: 1 / span 1;
@@ -881,7 +897,7 @@ header {
 
         p {
             font-size: 2.1rem;
-            margin:0;
+            margin: 0;
         }
     }
 
@@ -900,7 +916,7 @@ header {
             background-image: url("./../img/work/gmFinancial.jpg");
             grid-column: 2 / span 2;
             grid-row: 2 / span 1;
-            background-size:cover;
+            background-size: cover;
         }
     }
 
@@ -976,7 +992,7 @@ header {
 
         .image {
             grid-column: 1 / span 1;
-            background-size:cover;
+            background-size: cover;
             grid-row: 1 / span 1;
             background-image: url("./../img/work/cardHolder.jpg");
 
@@ -1018,15 +1034,16 @@ header {
             }
         }
     }
+
     &.workScreen3 {
         grid-template-rows: 1fr 1.4fr;
 
         .image {
             grid-column: 2 / span 2;
-            background-size:contain;
+            background-size: contain;
             grid-row: 1 / span 1;
             background-image: url("./../img/work/watch.png");
-            background-color:#f6f6f6;
+            background-color: #f6f6f6;
 
             &~.image {
                 background-image: url("./../img/work/buttonTv.jpg");

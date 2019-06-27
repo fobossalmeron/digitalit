@@ -68,7 +68,11 @@
         }
     }
 }
-
+@include media-query(1100px){
+    .screen8 .areasContainer .areasList {
+        margin-bottom: 1%; 
+    }
+}
 @include media-query(1000px) {
     html {
         font-size: 50%;
@@ -120,8 +124,11 @@
 
         li {
             max-height: 250px;
+            min-height: 200px;
             cursor: pointer;
-
+            .unhovered{
+                top: 150px;
+            }
             .backIcon {
                 height: 70%;
             }
@@ -151,8 +158,12 @@
                 h3 {
                     text-align: center;
                     padding: 0;
-                    margin-bottom: 20px
+                    margin-bottom: 20px;
                 }
+                .unhovered{
+                    opacity:1;
+                }
+                .hovered{opacity:0;}
             }
         }
     }

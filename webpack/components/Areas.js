@@ -87,7 +87,8 @@ class areas extends Component {
         onClick={() => this.toggleModal(areas)}
       >
         {areas.svg}
-        <h3 dangerouslySetInnerHTML={{ __html: areas.title }} />
+        <h3 className="hovered" dangerouslySetInnerHTML={{ __html: areas.title }} />
+        <h3 className="unhovered" dangerouslySetInnerHTML={{ __html: areas.title }} />
         <Graphic7 className="backIcon" />
         <p dangerouslySetInnerHTML={{ __html: areas.desc }} />
       </li>
