@@ -20,7 +20,7 @@ class ContactSection extends Component {
         </h2>
         <div className="locationContact">
           <ul className="chooseList">
-            <li>las vegas</li>
+            <li>seattle</li>
             <li>mexico city</li>
             <li>chicago</li>
             <li>toronto</li>
@@ -29,13 +29,15 @@ class ContactSection extends Component {
           </ul>
         </div>
         <div className="locationContact">
-          <p>universal number: +1-702 802 0200</p>
+          <p><b>USA: </b>1&nbsp;844&nbsp;814&nbsp;6444</p>
+          <p><b>Mexico: </b>1&nbsp;55&nbsp;8526&nbsp;8384</p>
           <p>
             <a href="mailto:success@designsuccess.com">
               success@designsuccess.com
             </a>
           </p>
         </div>
+
         <ContactForm />
         <LocationMap className="locationMap" />
         <footer>
