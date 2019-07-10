@@ -1,11 +1,11 @@
 ---
-title: 'digital:success – digital and IT innovation by design:success'
+title: 'transform:now - market research IT & digital innovation implementation'
 timezone: UTC
 email: success@designsuccess.com
 description: 'Award-winning digital pioneers, taking validated innovation and making them come digitally alive – fast! App development, digital prototyping, artificial intelligence – and much much more.'
-keywords: 'Digital success, digital:success, design:success, design success, Digital agency, innovation consultancy, app development, digital innovation, IT, prototyping, enterprise solution, artificial intelligence'
+keywords: 'Transform now, transform:now, design:success, design success, Digital agency, innovation consultancy, app development, digital innovation, IT, prototyping, enterprise solution, artificial intelligence'
 og_image: '/assets/img/og_image.jpg'
-url: http://designsuccess.com/digitalsuccess
+url: http://designsuccess.com/transformnow
 markdown: kramdown
 plugins:
 - jekyll-feed

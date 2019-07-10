@@ -64,7 +64,7 @@ class WorkSection extends Component {
             <ClientGMFinancial />
             <p>
               For GM customers, we created a dynamic app for Android and iPhone
-              that allowes them to select the right car based on their
+              that allows them to select the right car based on their
               lifestyle. This app also enables access to car loans provided by
               GM Financial Services.
               <br />

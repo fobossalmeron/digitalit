@@ -15,7 +15,7 @@ class ProcessSection extends Component {
             our patented & ISO:9001 certified proven process in the only one of
             its kind in the world.
           </p>
-          <Graphic2 style={{marginBottom:"15%"}}/>
+          <Graphic2 style={{ marginBottom: "15%" }} />
           <ul>
             <li>
               <GraphicA />
@@ -63,10 +63,12 @@ class ProcessSection extends Component {
               <div className="step">
                 <h3>4: validation - innovation:lab</h3>
                 <p>
-                  Our strategic, business, innovation and creative teams
-                  co-create strategic platforms, solutions, designs, and
-                  communications, all based on fitting business strategy and
-                  identified in-depth insights.
+                  Our world famous, patented and certified process utilizes
+                  sequential, qualitative and quantitative research
+                  methodologies. We will identify the most impactful innovations
+                  and solutions. We guarantee the winning innovation will have a
+                  minimum 85% deep buy-in from your target – or we continue for
+                  free until we reach it!
                 </p>
               </div>
             </li>
