@@ -52,7 +52,11 @@ class WorkSection extends Component {
         <h3>customer success stories examples</h3>
         <div className="workScreen screen">
           <div className="image moneyAmigoImage" />
-          <div className="gradient left">
+          <div className="gradient">
+            {// ey es aquí
+            }
+            <div className="left" />
+            <div className="bottom" />
             <ClientFinanmadrid />
             <p>
               An online agile and flexible auto loan management platform that
@@ -60,7 +64,9 @@ class WorkSection extends Component {
               struggling.
             </p>
           </div>
-          <div className="gradient right">
+          <div className="gradient">
+          <div className="right" />
+            <div className="bottom" />
             <ClientGMFinancial />
             <p>
               For GM customers, we created a dynamic app for Android and iPhone

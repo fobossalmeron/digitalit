@@ -253,16 +253,6 @@
         font-size: 6.9rem;
     }
 
-    /*.screen1{
-        svg{
-            &.mobile{
-                display: flex;
-            }
-            &.desktop{
-                display: none;
-            }
-        }
-    }*/
 }
 
 @include media-query(800px) {
@@ -438,6 +428,92 @@
     .screen4,
     .screen7 {
         padding: 5% 6% 0 3%;
+    }
+
+    .workScreen { //700px 
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr 1.3fr 1fr;;
+        
+        .gradient{
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 1;
+            .right, .left{
+                display:none;
+            }
+            .bottom{
+                display:flex;
+            }
+            &~.gradient {
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 1;
+                &:before{
+                    display:none;
+                }
+            }
+        }
+        .image{
+            grid-column: 1 / span 2;
+            grid-row: 2;
+            &~.image {
+                grid-column: 1 / span 2;
+                grid-row: 4 / span 1;
+            }
+        }
+
+        &.workScreen2 {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; 
+
+            .gradient {
+                grid-column: 1 / span 2;
+                grid-row: 1;
+                .right{
+                    display:none;
+                }
+            }
+
+            .image {
+                grid-column: 1 / span 1;
+                grid-row: 3 / span 1;
+                display:flex;
+                &~.image {
+                    grid-column: 2 / span 1;
+                    grid-row: 3 / span 1;
+                    &~.image {
+                        grid-column: 1 / span 2;
+                        grid-row: 2 / span 1;
+                    }
+                }
+            }
+        }
+
+        &.workScreen3 { //700px
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr .5fr .5fr; 
+
+            .gradient {
+                grid-column: 1 / span 2;
+                grid-row: 1;
+                .right{
+                    display:none;
+                }
+            }
+
+            .image {
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 1;
+                display:flex;
+                &~.image {
+                    display:none;
+                    &~.image {
+                        grid-column: 1 / span 2;
+                        grid-row: 2 / span 1;
+                        display:flex;
+                    }
+                }
+            }
+        }
+        
     }
 }
 
