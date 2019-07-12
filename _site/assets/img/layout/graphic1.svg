@@ -1,64 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 565.5 343" style="enable-background:new 0 0 565.5 343;" xml:space="preserve">
-<g id="Text">
-	<g>
-		<text transform="matrix(1 0 0 1 48.0063 45.4707)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Digital Strategy &amp; </tspan><tspan x="-10.2" y="18.1" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Next Digital Ventures</tspan></text>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 278.3721 15.0527)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Digital Experience</tspan><tspan x="17" y="18.1" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">&amp; Platforms </tspan></text>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 406.0723 103.416)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Omni Channel</tspan><tspan x="0" y="18.1" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Marketing Development </tspan></text>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 1.4854 174.1191)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Customer-centric</tspan><tspan x="10.1" y="18.1" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">UX  innovation</tspan></text>
-	</g>
-	<g>
-		
-			<text transform="matrix(1 0 0 1 285.4614 337.458)" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">AI Empowerment</text>
-	</g>
-	<g>
-		<text transform="matrix(1 0 0 1 65.0405 309.3486)"><tspan x="0" y="0" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Big Data-Driven</tspan><tspan x="25.3" y="18.1" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Analysis</tspan></text>
-	</g>
-	<g>
-		
-			<text transform="matrix(1 0 0 1 408.4375 247.4248)" style="fill:#FFFFFF; font-family:'TitilliumWeb-Regular'; font-size:15.6016px;">Enterprise Mobility</text>
-	</g>
-</g>
-<g id="Figure">
-	<g>
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="183.4549" y1="124.506" x2="275.2708" y2="124.506">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset="1" style="stop-color:#00FFFF"/>
-		</linearGradient>
-		<polygon style="fill:url(#SVGID_1_);" points="275.3,92.6 183.5,71.6 234.4,177.4 		"/>
-		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="132.501" y1="177.4095" x2="234.4089" y2="177.4095">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset="1" style="stop-color:#00FFFF"/>
-		</linearGradient>
-		<polygon style="fill:url(#SVGID_2_);" points="183.5,71.6 132.5,177.4 183.5,283.2 234.4,177.4 		"/>
-		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="183.4549" y1="69.0146" x2="297.9474" y2="69.0146">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset="1" style="stop-color:#00FFFF"/>
-		</linearGradient>
-		<polygon style="fill:url(#SVGID_3_);" points="297.9,45.5 183.5,71.6 275.3,92.6 		"/>
-		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="275.2708" y1="82.0807" x2="389.7634" y2="82.0807">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset="1" style="stop-color:#00FFFF"/>
-		</linearGradient>
-		<polygon style="fill:url(#SVGID_4_);" points="389.8,118.7 297.9,45.5 275.3,92.6 		"/>
-		<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="183.4549" y1="243.3791" x2="297.9474" y2="243.3791">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset="1" style="stop-color:#00FFFF"/>
-		</linearGradient>
-		<polygon style="fill:url(#SVGID_5_);" points="183.5,283.2 297.9,309.3 234.4,177.4 		"/>
-		<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="234.4089" y1="200.9538" x2="389.7634" y2="200.9538">
-			<stop  offset="0" style="stop-color:#0000FF"/>
-			<stop  offset="1" style="stop-color:#00FFFF"/>
-		</linearGradient>
-		<polygon style="fill:url(#SVGID_6_);" points="275.3,92.6 234.4,177.4 297.9,309.3 389.8,236.1 389.8,118.7 		"/>
-	</g>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="enable-background:new 0 0 565.5 343" version="1.1" viewBox="0 0 565.5 343" xml:space="preserve">
+    <g id="Text">
+        <text transform="matrix(1 0 0 1 48.0063 45.4707)">
+            <tspan x="0" y="0" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Digital Strategy &amp; </tspan><tspan x="-10.2" y="18.1" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Next Digital Ventures</tspan>
+        </text>
+        <text transform="matrix(1 0 0 1 278.3721 15.0527)">
+            <tspan x="0" y="0" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Digital Experience</tspan><tspan x="17" y="18.1" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">&amp; Platforms</tspan>
+        </text>
+        <text transform="matrix(1 0 0 1 406.0723 103.416)">
+            <tspan x="0" y="0" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Omni Channel</tspan><tspan x="0" y="18.1" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Marketing Development</tspan>
+        </text>
+        <text transform="matrix(1 0 0 1 1.4854 174.1191)">
+            <tspan x="0" y="0" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Customer-centric</tspan><tspan x="10.1" y="18.1" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">UX innovation</tspan>
+        </text>
+        <text style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px" transform="matrix(1 0 0 1 285.4614 337.458)">
+            AI Empowerment
+        </text>
+        <text transform="matrix(1 0 0 1 65.0405 309.3486)">
+            <tspan x="0" y="0" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Big Data-Driven</tspan><tspan x="25.3" y="18.1" style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px">Analysis</tspan>
+        </text>
+        <text style="fill:#FFFFFF;font-family:'TitilliumWeb-Regular';font-size:15.6016px" transform="matrix(1 0 0 1 408.4375 247.4248)">
+            Enterprise Mobility
+        </text>
+    </g>
+    <g id="Figure">
+        <g>
+            <linearGradient id="SVGID_1_" x1="183.4549" x2="275.2708" y1="124.506" y2="124.506" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#0000FF"/>
+                <stop offset="1" style="stop-color:#00FFFF"/>
+            </linearGradient>
+            <polygon points="275.3,92.6 183.5,71.6 234.4,177.4 		" style="fill:url(#SVGID_1_)"/>
+            <linearGradient id="SVGID_2_" x1="132.501" x2="234.4089" y1="177.4095" y2="177.4095" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#0000FF"/>
+                <stop offset="1" style="stop-color:#00FFFF"/>
+            </linearGradient>
+            <polygon points="183.5,71.6 132.5,177.4 183.5,283.2 234.4,177.4 		" style="fill:url(#SVGID_2_)"/>
+            <linearGradient id="SVGID_3_" x1="183.4549" x2="297.9474" y1="69.0146" y2="69.0146" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#0000FF"/>
+                <stop offset="1" style="stop-color:#00FFFF"/>
+            </linearGradient>
+            <polygon points="297.9,45.5 183.5,71.6 275.3,92.6 		" style="fill:url(#SVGID_3_)"/>
+            <linearGradient id="SVGID_4_" x1="275.2708" x2="389.7634" y1="82.0807" y2="82.0807" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#0000FF"/>
+                <stop offset="1" style="stop-color:#00FFFF"/>
+            </linearGradient>
+            <polygon points="389.8,118.7 297.9,45.5 275.3,92.6 		" style="fill:url(#SVGID_4_)"/>
+            <linearGradient id="SVGID_5_" x1="183.4549" x2="297.9474" y1="243.3791" y2="243.3791" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#0000FF"/>
+                <stop offset="1" style="stop-color:#00FFFF"/>
+            </linearGradient>
+            <polygon points="183.5,283.2 297.9,309.3 234.4,177.4 		" style="fill:url(#SVGID_5_)"/>
+            <linearGradient id="SVGID_6_" x1="234.4089" x2="389.7634" y1="200.9538" y2="200.9538" gradientUnits="userSpaceOnUse">
+                <stop offset="0" style="stop-color:#0000FF"/>
+                <stop offset="1" style="stop-color:#00FFFF"/>
+            </linearGradient>
+            <polygon points="275.3,92.6 234.4,177.4 297.9,309.3 389.8,236.1 389.8,118.7 		" style="fill:url(#SVGID_6_)"/>
+        </g>
+    </g>
 </svg>

@@ -113,6 +113,9 @@
         min-height: 0;
         padding: 5% 0;
     }
+    .screen8 h2 span{
+        display:block;
+    }
 
     .screen8 .areasContainer .areasModal {
         display: flex;
@@ -171,7 +174,6 @@
     .screen9 {
         p {
             font-size: 2.7rem;
-
         }
     }
 
@@ -470,9 +472,13 @@
             }
         }
 
-        &~.locationContact p {
-            font-size: 1.5rem;
-        }
+        &~.locationContact{
+            margin-top: 0;
+            align-items: flex-end;
+            p {
+                font-size: 1.5rem;
+            }
+        } 
     }
 
     #home h1 {

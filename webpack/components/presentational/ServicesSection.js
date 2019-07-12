@@ -197,7 +197,7 @@ necessary to designing and build robust APIs with mobile ready back-ends.
           </p>
         </div>*/}
         <div className="screen8 screen">
-          <h2>service areas</h2>
+          <h2>service areas<span><br/>(click to see more)</span></h2>
           <Areas />
         </div>
       </section>

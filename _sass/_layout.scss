@@ -230,13 +230,12 @@ header {
     svg {
         &:nth-of-type(1) {
             padding: 5%;
-
-            text {
-                fill: white;
-                font-family: $base-font-family;
-                font-size: 15.3715px;
-                font-weight: 400;
-            }
+        }
+        text, tspan {
+            fill: white;
+            font-family: $base-font-family;
+            font-size: 15.3715px;
+            font-weight: 400;
         }
 
         &.mobile {
@@ -260,7 +259,7 @@ header {
     }
 
     svg {
-        text {
+        text, tspan {
             fill: white;
             font-family: $secondary-font-family;
             font-size: 15.3715px;
@@ -609,6 +608,16 @@ header {
         position: relative;
         font-weight: bold;
         margin-bottom: 5%;
+        span{
+            font-size: 2rem;
+            font-weight: normal;
+            height: 20px;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            font-family: $base-font-family;
+            display:none;
+        }
     }
 
     .areasContainer {
