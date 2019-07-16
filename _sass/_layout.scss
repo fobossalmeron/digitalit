@@ -783,6 +783,7 @@ header {
         font-weight: bold;
         font-size: 6.5rem;
         margin-bottom: 5%;
+        padding: 0 3%;
     }
 
     .clients {
@@ -929,7 +930,8 @@ header {
             background-image: url("./../img/work/gmFinancial.jpg");
             grid-column: 2 / span 2;
             grid-row: 2 / span 1;
-            background-size: cover;
+            background-size: 100% auto;
+            background-color: #131313;
         }
     }
 
@@ -1001,23 +1003,29 @@ header {
 
     &.workScreen2 {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1.6fr;
+        grid-template-rows: auto auto;
 
         .image {
             grid-column: 1 / span 1;
             background-size: cover;
             grid-row: 1 / span 1;
             background-image: url("./../img/work/cardHolder.jpg");
+            background-position: top center;
 
             &~.image {
-                background-image: url("./../img/work/googleHome.jpg");
                 grid-column: 3 / span 1;
                 grid-row: 1 / span 1;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-image: url("./../img/work/googleHome.jpg"), linear-gradient(to right, #fd7d18 , #eb3894);
 
                 &~.image {
-                    background-image: url("./../img/work/cardApp.jpg");
+                    background-image: url("./../img/work/cardApp.jpg"), linear-gradient(to right, #01a8dc, #00b450);
                     grid-column: 1 / span 3;
                     grid-row: 2 / span 1;
+                    height: 0;
+                    padding-bottom: 40%;
+
                 }
             }
         }
@@ -1049,7 +1057,8 @@ header {
     }
 
     &.workScreen3 {
-        grid-template-rows: 1fr 1.4fr;
+        grid-template-rows: auto auto;
+        background-color: #f6f6f6;
 
         .image {
             grid-column: 2 / span 2;
@@ -1062,6 +1071,8 @@ header {
                 background-image: url("./../img/work/buttonTv.jpg");
                 grid-column: 1 / span 3;
                 grid-row: 2 / span 1;
+                height: 0;
+                padding-bottom: 45%;
             }
         }
 
